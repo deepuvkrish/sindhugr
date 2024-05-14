@@ -1,0 +1,67 @@
+
+<head>	
+    <title> Carbon Footprint Calator
+
+    </title>
+    <link rel="stylesheet" type="text/css" href="calc.css">
+</head>
+
+	<header>
+		<h1>Carbonprint Calculator</h1>
+	</header>
+	<main>
+		<form id="calculator">
+			<h2>How do you get around?</h2>
+			<label>
+				<input type="radio" name="transportation" value="0.0005" required>
+				I don't own a car, I walk or bike everywhere
+			</label>
+			<label>
+				<input type="radio" name="transportation" value="0.0025" required>
+				I own a car and drive it occasionally
+			</label>
+			<label>
+				<input type="radio" name="transportation" value="0.005" required>
+				I own a car and drive it most places
+			</label>
+			<label>
+				<input type="radio" name="transportation" value="0.01" required>
+				I drive a lot and own a gas-guzzling vehicle
+			</label>
+			<h2>How often do you eat meat?</h2>
+			<label>
+				<input type="radio" name="diet" value="0.0005" required>
+				I'm vegetarian or vegan
+			</label>
+			<label>
+				<input type="radio" name="diet" value="0.0025" required>
+				I eat meat once or twice a week
+			</label>
+			<label>
+				<input type="radio" name="diet" value="0.005" required>
+				I eat meat every day
+			</label>
+			<h2>How energy efficient is your home?</h2>
+			<label>
+				<input type="radio" name="home" value="0.0005" required>
+				I live in a small, energy-efficient home
+			</label>
+			<label>
+				<input type="radio" name="home" value="0.0025" required>
+				I live in a medium-sized home
+			</label>
+			<label>
+				<input type="radio" name="home" value="0.005" required>
+				I live in a large, inefficient home
+			</label>
+			<button type="submit">Calculate</button>
+		</form>
+		<div id="result">
+
+        </div>
+        <script src="calc.js"></script>
+
+	</main>
+	
+</body>
+</html>
