@@ -241,31 +241,33 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <form id="calculator" class="calc-form-section">
 
                     <div class="form__group field">
-                        <input type="input" class="form__field" placeholder="Electricity Bill" name="ebill" id='ebill' required />
+                        <input type="input" class="form__field" placeholder="Electricity Bill" name="ebill" id='ebill' onchange="elecfunction()" required />
                         <label class="form__label">Enter your monthly Electricity bill:</label>
                     </div>
 
                     <div class="form__group field">
-                        <input type="input" class="form__field" placeholder="Gas Bill" name="gasbill" id='gasbill' required />
-                        <label class="form__label">Enter your monthly gas bill:</label>
+                        <div id="gaserror" class="bilerr"></div>
+                        <input type="number" class="form__field" placeholder="Gas Bill" name="gasbill" id='gasbill' min="0" max="16700" onchange="gasfunction()" required />
+                        <label class="form__label">Enter your monthly gas bill (Upto 16,700):</label>
                     </div>
 
                     <div class="form__group field">
-                        <input type="input" class="form__field" placeholder="Oil Bill" name="oilbill" id='oilbill' onchange="oilfunction()" required />
-                        <label class="form__label">Enter your monthly oil bill:</label>
+                        <div id="oilerror" class="bilerr"></div>
+                        <input type="number" class="form__field" placeholder="Oil Bill" name="oilbill" id='oilbill' min="0" max="37000" onchange="oilfunction()" required />
+                        <label class="form__label">Enter your monthly oil bill (Upto 37,000):</label>
                     </div>
 
                     <div class="form__group field">
-                        <input type="input" class="form__field" placeholder="Mileage Bill" name="mileage" id='mileage' required />
+                        <input type="input" class="form__field" placeholder="Mileage Bill" name="mileage" id='mileage' onchange="carmileage()" required />
                         <label class="form__label">Enter your total yearly mileage on your car:</label>
                     </div>
 
                     <div class="form__group field">
-                        <input type="input" class="form__field" placeholder="Short Flight Bill" name="sfbill" id='sfbill' required />
+                        <input type="input" class="form__field" placeholder="Short Flight Bill" name="sfbill" id='sfbill' onchange="sflights()" required />
                         <label class="form__label">Average short flights taken past year</label>
                     </div>
                     <div class="form__group field">
-                        <input type="input" class="form__field" placeholder="Long Flight Bill" name="lfbill" id='lfbill' required />
+                        <input type="input" class="form__field" placeholder="Long Flight Bill" name="lfbill" id='lfbill' onchange="lflights()" required />
                         <label class="form__label">Average Long flights taken past year</label>
                     </div>
                     <div class="form__group field">
@@ -280,19 +282,66 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary">Calculate</button>
-                    <div id="result" class="resilt"></div>
+                    <button type="submit" class="btn btn-success" style="width: 25%;">Calculate</button>
+
 
                 </form>
-                <script src="attributes/js/calc.js"></script>
+
             </div>
             <div class="calc-meter">
                 <div class="calc-meters-type">
-                    <div class="electricity"></div>
-                    <div class="gas"></div>
+                    <div class="electricity">
+                        <p>Electricity</p>
+
+                        <div class="bolt">
+                            <svg viewBox="0 0 170 57" class="white left">
+                                <path d="M36.2701759,17.9733192 C-0.981139498,45.4810755 -7.86361824,57.6618438 15.6227397,54.5156241 C50.8522766,49.7962945 201.109341,31.1461782 161.361488,2"></path>
+                            </svg>
+                            <svg viewBox="0 0 170 57" class="white right">
+                                <path d="M36.2701759,17.9733192 C-0.981139498,45.4810755 -7.86361824,57.6618438 15.6227397,54.5156241 C50.8522766,49.7962945 201.109341,31.1461782 161.361488,2"></path>
+                            </svg>
+                            <div>
+                                <span></span>
+                            </div>
+                            <svg viewBox="0 0 112 44" class="circle">
+                                <path d="M96.9355003,2 C109.46067,13.4022454 131.614152,42 56.9906735,42 C-17.6328048,42 1.51790702,13.5493875 13.0513641,2"></path>
+                            </svg>
+                            <svg viewBox="0 0 70 3" class="line left">
+                                <path transform="translate(-2.000000, 0.000000)" d="M2,1.5 L70,1.5"></path>
+                            </svg>
+                            <svg viewBox="0 0 70 3" class="line right">
+                                <path transform="translate(-2.000000, 0.000000)" d="M2,1.5 L70,1.5"></path>
+                            </svg>
+                        </div>
+
+
+
+                        <div id="elecresult" class="fireoil"> MTs</div>
+
+                    </div>
+                    <div class="gas">
+                        <p>Gas</p>
+                        <div class="fire">
+                            <div class="fire-left">
+                                <div class="main-fire"></div>
+                                <div class="particle-fire"></div>
+                            </div>
+                            <div class="fire-center">
+                                <div class="main-fire"></div>
+                                <div class="particle-fire"></div>
+                            </div>
+                            <div class="fire-right">
+                                <div class="main-fire"></div>
+                                <div class="particle-fire"></div>
+                            </div>
+                            <div class="fire-bottom">
+                                <div class="main-fire"></div>
+                            </div>
+                        </div>
+                        <div id="fireresult" class="fireoil"> MTs</div>
+                    </div>
                     <div class="oil">
                         <p>Oil</p>
-
                         <svg version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" style="display: none;">
                             <symbol id="wave">
                                 <path d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"></path>
@@ -320,10 +369,124 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
                     </div>
-                    <div class="car"></div>
-                    <div class="flight"></div>
-                    <div class="recycle"></div>
+
                 </div>
+
+
+                <div class="calc-meters-type">
+                    <div class="car">
+                        <p>Car Mileage</p>
+                        <svg width="200" height="140" viewBox="0 0 450 300" class="car-progress" fill="#fff" stroke="#444" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+                            <defs>
+                                <g id="spot" transform="translate(225 165)">
+                                    <circle r="120" stroke-width="4" />
+                                    <path d="m-120 60h240" />
+                                    <path stroke-width="6" d="m135 60h20" />
+                                </g>
+                                <path id="cloud" d="m0 0a22 22 0 0 1 30 -20a32 32 0 0 1 55 20z" />
+                                <g id="wheel">
+                                    <circle r="22" stroke-width="6" />
+                                    <circle r="13" stroke-width="4" />
+                                    <path class="wheel-shine" stroke-width="2" d="m-2 -8a8 8 0 0 1 10 10" />
+                                </g>
+                            </defs>
+                            <g class="bg">
+                                <mask id="spot-mask">
+                                    <use xlink:href="#spot" />
+                                </mask>
+                                <path stroke-width="0" fill="#aab" class="asphalt-dark" d="M30 225h320v75h-270z" mask="url(#spot-mask)" />
+                                <path stroke-width="0" fill="#ccd" class="asphalt-light" d="M30 225l320 50v25h-270z" mask="url(#spot-mask)" />
+                                <use fill="none" xlink:href="#spot" />
+                                <circle class="sun" r="40" cx="150" cy="80" />
+                            </g>
+                            <g class="clouds">
+                                <g id="cloud-3" transform="translate(110 0)">
+                                    <use xlink:href="#cloud" transform="translate(40 110) scale(-0.6 0.6)" />
+                                </g>
+                                <g id="cloud-2" transform="translate(250 0)">
+                                    <use xlink:href="#cloud" transform="translate(40 80) scale(-0.6 0.6)" />
+                                </g>
+                                <g id="cloud-1" transform="translate(270 0)">
+                                    <use xlink:href="#cloud" transform="translate(0 120)" />
+                                </g>
+                            </g>
+                            <g class="car" transform="translate(225 175)">
+                                <path class="windows" d="m5 -5v-35h35 q12 0 20 10l15 25h-130l15 -25q8 -10 20 -10h25" />
+                                <path class="body" stroke-width="6" d="m5 -5h72v55h-15a22 22 0 0 0 -44 0h-30a22 22 0 0 0 -44 0h-25v-20q0 -25 25 -35z" />
+                                <circle class="eye" stroke-width="6" r="4" cx="-66" cy="18" />
+                                <path class="mouth" stroke-width="4" d="m-77 40q5 0 10 -5" />
+                                <g transform="translate(-34 50)">
+                                    <use xlink:href="#wheel" class="spinning" />
+                                </g>
+                                <g transform="translate(40 50)">
+                                    <use xlink:href="#wheel" class="spinning" />
+                                </g>
+                            </g>
+                        </svg>
+
+                        <div id="mileagebill" class="fireoil"> MTs</div>
+
+                    </div>
+
+                    <div class="flight">
+                        <p>Flights</p>
+                        <div class="loading-flight-animation">
+                            <div class="cloud cloud-1">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="cloud cloud-2">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="cloud cloud-3">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <i class="fa-solid fa-plane fa-2l" style="color: #74C0FC;"></i>
+
+                            <div class="stars">
+                                <svg class='star star-1' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
+                                    <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z' fill='#f1c40f'>
+                                </svg>
+                                <svg class='star star-2' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
+                                    <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z' fill='#f1c40f'>
+                                </svg>
+                                <svg class='star star-3' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
+                                    <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z' fill='#f1c40f'>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="airresult" class="fireoil">0</div>
+
+
+
+                    </div>
+
+
+                    <div class="recycle">
+                        <p>Waste Recycle</p>
+                        <section>
+                            <span class="trash">
+                                <span></span>
+                                <i></i>
+                            </span>
+                        </section>
+                        <div id="recycleresult" class="fireoil">MTs</div>
+                    </div>
+                </div>
+
+                <div class="calc-metars-type">
+                    <div id="result" class="resilt"></div>
+                    <div id="msg" class="messagecarbon"></div>
+                </div>
+
 
             </div>
         </div>
@@ -345,6 +508,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </footer>
 
     <!-- JavaScript Libraries -->
+    <script src="attributes/js/calc.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="attributes/js/easing.min.js"></script>
@@ -354,59 +518,47 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <!-- Template Javascript -->
     <script src="attributes/js/main.js"></script>
     <script>
+        $('.bolt').each(function(e) {
+
+            var bolt = $(this),
+                div = $(this).children('div');
+
+            bolt.addClass('animate');
+
+            var tween = new TimelineMax({
+                onComplete() {
+                    bolt.removeClass('animate');
+                    repeat();
+                }
+            }).set(div, {
+                rotation: 360
+            }).to(div, .7, {
+                y: 80,
+                rotation: 370
+            }).to(div, .6, {
+                y: -140,
+                rotation: 20
+            }).to(div, .1, {
+                rotation: -24,
+                y: 80
+            }).to(div, .8, {
+                ease: Back.easeOut.config(1.6),
+                rotation: 0,
+                y: 0
+            });
+
+            function repeat() {
+                setTimeout(() => {
+                    bolt.addClass('animate');
+                    tween.restart();
+                }, 100);
+            }
+
+        })
+
         function menuToggle() {
             const toggleMenu = document.querySelector(".menu");
             toggleMenu.classList.toggle("active");
-        }
-
-        function oilfunction() {
-            var x = document.getElementById("oilbill").value;
-            document.getElementById("count").innerHTML = 113 * x;
-            oilanimate();
-        }
-
-        function oilanimate() {
-            const watcolor = getComputedStyle(document.querySelector('.water'));
-            const watfcolor = getComputedStyle(document.querySelector('.water_wave_back'));
-            const watbcolor = getComputedStyle(document.querySelector('.water_wave_front '));
-            const upside = watcolor.backgroundColor;
-            const frontside = watfcolor.fill;
-            const backside = watbcolor.fill;
-            let col1 = document.getElementsByClassName('water')[0];
-            let col2 = document.getElementsByClassName('water_wave_front')[0];
-            let col3 = document.getElementsByClassName('water_wave_back')[0];
-            var cnt = document.getElementById("count");
-            var water = document.getElementById("water");
-            var percent = cnt.innerText;
-
-            let grandpercentage = (percent / 4246653) * 100;
-            var interval;
-            interval = setInterval(function() {
-                cnt.innerHTML = percent;
-                water.style.transform = 'translate(0' + ',' + (100 - grandpercentage) + '%)';
-                clearInterval(interval);
-            }, 100);
-            if (grandpercentage <= 30) {
-                col1.style.background = "#329202";
-                col2.style.fill = "#58c600";
-                col3.style.fill = "#49b600";
-                console.log("less than 30", grandpercentage);
-            } else if (grandpercentage > 30 && grandpercentage <= 55) {
-                col1.style.background = "#f0f31c";
-                col2.style.fill = "#e8f345";
-                col3.style.fill = "#f9ff00";
-                console.log("greater than 30", grandpercentage)
-            } else if (grandpercentage > 55 && grandpercentage < 85) {
-                col1.style.background = "rgb(243 158 28)";
-                col2.style.fill = "rgb(255 167 0)";
-                col3.style.fill = "rgb(243 147 69)";
-                console.log("greater than 55", grandpercentage)
-            } else {
-                col1.style.background = "rgb(243 28 28)";
-                col2.style.fill = "rgb(221 0 0)";
-                col3.style.fill = "rgb(173 15 1)";
-                console.log("greater than 85", grandpercentage)
-            }
         }
     </script>
 </body>
