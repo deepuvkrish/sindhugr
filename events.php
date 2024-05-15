@@ -17,6 +17,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <head>
     <title> Pro Planet Person</title>
     <link rel="stylesheet" type="text/css" href="attributes/css/home.css">
+    <link rel="stylesheet" type="text/css" href="attributes/css/event.css">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,113 +46,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
-    <style>
-        .event {
-            margin-top: 10pc;
-        }
 
-        .news-events-page--list-page {
-            text-align: justify;
-            text-align: center;
-
-        }
-
-        @media (min-width: 768px) {
-            .modal-dialog {
-                width: 980px;
-            }
-        }
-
-        .customNavigation a {
-            position: absolute;
-            top: 35;
-            left: 0;
-            right: auto;
-            padding: 30px;
-            float: left;
-            font-size: 3em;
-            cursor: pointer;
-            z-index: 1;
-        }
-
-        .customNavigation a.next {
-            left: auto;
-            right: 0;
-        }
-
-        @media (min-width: 320px) {
-            .customNavigation a {
-                top: 20%;
-            }
-        }
-
-        @media (min-width: 480px) {
-            .customNavigation a {
-                top: 25%;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .customNavigation a {
-                top: 30%;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .customNavigation a {
-                top: 35%;
-            }
-        }
-
-        #sync1 .item {
-            background: #0c83e7;
-            margin: 5px;
-            color: #FFF;
-            border-radius: 3px;
-            text-align: center;
-        }
-
-        #sync2 .owl-item .item {
-            background: #333;
-            margin: 5px;
-            color: #FFF;
-            border-radius: 3px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        #sync2 .owl-item .item img {
-            opacity: 0.5;
-        }
-
-        #sync2 .owl-item.synced .item img {
-            opacity: 1;
-        }
-
-        .modal.in .modal-dialog {
-            border-radius: 0px;
-        }
-
-        .modal.in .modal-dialog .modal-content {
-            border-radius: 0px;
-        }
-
-        .modal.in .modal-dialog .modal-content .modal-header {
-            border-radius: 0px;
-            text-align: center;
-        }
-
-        .customimage {
-            width: 359px;
-            height: 170px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .row {
-            padding: 10px;
-        }
-    </style>
 </head>
 
 <body>
@@ -216,57 +111,97 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
     <div class="event">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 news-events-page--list-page">
-                    <img src="https://www.logicallyfacts.com/hubfs/view-green-forest-trees-with-co2.jpg" class="img-responsive customimage overlay">
-                    </a>
-                    <h6>
-                        <p data-toggle="modal" data-target="#carouselModal">Global Growth in Emissions</p>
-                    </h6>
-                    <p>Despite disruptions caused by the global energy crisis, global energy-related CO2 emissions grew by 0.9% or 321 Mt in 2022, reaching a new high of over 36.8 Gt.
-                        This growth was much slower than the sharp rebound observed in 2021 (over 6%) due to the Covid-19 pandemic.</p>
+
+
+
+        <div class="content video-gallery-edu">
+
+            <div class="section-header">
+                <div class="section-heading">
+                    <h4 class="poppins-semibold">Events <em>and </em> Campaigns </h4>
+                </div>
+            </div>
+
+
+
+            <div class="video-gallery">
+
+                <div class="gallery-item ">
+                    <img src="https://www.logicallyfacts.com/hubfs/view-green-forest-trees-with-co2.jpg" alt="CO2 Emmision" />
+                    <div class="gallery-item-caption">
+                        <!--<div>-->
+                        <h2>Global Growth in Emissions</h2>
+                        <p>Despite disruptions caused by the global energy crisis, global energy-related CO2 emissions grew by 0.9%
+                            or 321 Mt in 2022, reaching a new high of over 36.8 Gt.
+                            This growth was much slower than the sharp rebound observed in 2021 (over 6%) due to the Covid-19
+                            pandemic.</p>
+                        <!--</div>-->
+                        <a class="vimeo-popup" href="#"></a>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://media.istockphoto.com/id/1141520118/photo/ecological-catastrophy.jpg?s=612x612&w=0&k=20&c=hPbX_vmideFRGfEeOKQhusIrlmc31H2G9pPlT3yTCEw=" alt="Air Pollution Awareness Campaign:
+                    Breathe Clean, Live Green" />
+                    <div class="gallery-item-caption">
+                        <!--<div>-->
+                        <h2>Air Pollution Awareness Campaign:
+                            Breathe Clean, Live Green</h2>
+                        <p>Gain knowledge about air pollution’s impact on health and ecosystems.
+                            Connect with like-minded individuals and organization. Be part of a collective effort to create a cleaner, healthier future.Registration: Visit our website to register and receive event updates. Let’s breathe clean, live green, and protect our planet together! 🌿🌎</p>
+                        <!--</div>-->
+                        <a class="vimeo-popup" href="#"></a>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://housing.com/news/wp-content/uploads/2023/03/shutterstock_2008709621-1200x700-compressed.jpg" class="north-cascades-img" alt="Water Pollution Awareness Campaign: Safeguarding Our Blue Planet" />
+                    <div class="gallery-item-caption">
+                        <!--<div>-->
+                        <h2>Water Pollution Awareness Campaign: Safeguarding Our Blue Planet</h2>
+                        <p>Join us in our mission to protect our precious water resources! The Water Pollution Awareness Campaign aims to educate, engage, and empower individuals and communities to take action against water pollution. Together, let’s create ripples of change and ensure clean water for generations to come! 💧🌊</p>
+                        <!--</div>-->
+                        <a class="vimeo-popup" href="#"></a>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://as2.ftcdn.net/v2/jpg/02/71/75/59/1000_F_271755921_rxz22woHX5UtWryKTYpGVfVaO2VGkWYS.jpg" alt="Stuffed with stuffs" />
+                    <div class="gallery-item-caption">
+                        <!--<div>-->
+                        <h2>Stuffed with stuffs</h2>
+                        <p>Items shipped to your home often come wrapped in plastic packaging; toys bought at the store are covered
+                            in it. Think about what can be bought secondhand, what can be shared, and what doesn’t need to be
+                            purchased at all.</p>
+                        <!--</div>-->
+                        <a class="vimeo-popup" href="#"></a>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://sb.ecobnb.net/app/uploads/sites/3/2020/12/cycling-is-healthy.jpg" alt="Walk it out" />
+                    <div class="gallery-item-caption">
+                        <!--<div>-->
+                        <h2>Walk it out</h2>
+                        <p>Walk or bike as much as you can. Biking or walking just one mile a day for a year could save 330 pounds of carbon dioxide—that’s the same as planting four trees and letting them grow for 10 years!Together,let’s create a breath of fresh air. Join us with events</p>
+                        <!--</div>-->
+                        <a class="vimeo-popup" href="#"></a>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://europlas.com.vn/Data/Sites/1/News/5368/how-to-recycle-plastic-bottles-(2).jpg" alt="Recycle Plastic" />
+                    <div class="gallery-item-caption">
+                        <!--<div>-->
+                        <h2>Recycle Plastic</h2>
+                        <p>According to one study, over eight million tons of plastic pollution end up in the ocean each year. Drink from a refillable water bottle, place your sandwich in cloth or a reusable container, and use bar soap instead of bottled.</p>
+                        <!--</div>-->
+                        <a class="vimeo-popup" href="#"></a>
+                    </div>
                 </div>
 
 
-                <div class="col-sm-4 news-events-page--list-page">
-                    <a href="#" data-toggle="modal" data-target="#carouselModal">
-                        <img src="https://media.istockphoto.com/id/1141520118/photo/ecological-catastrophy.jpg?s=612x612&w=0&k=20&c=hPbX_vmideFRGfEeOKQhusIrlmc31H2G9pPlT3yTCEw=" class="img-responsive customimage">
-                    </a>
-                    <h6>
-                        <p data-toggle="modal" data-target="#carouselModal">Air Pollution Awareness Campaign:
-                            Breathe Clean, Live Green</p>
-                    </h6>
-                    <p>Gain knowledge about air pollution’s impact on health and ecosystems.
-                        Connect with like-minded individuals and organization. Be part of a collective effort to create a cleaner, healthier future.Registration: Visit our website to register and receive event updates.
-                        Let’s breathe clean, live green, and protect our planet together! 🌿🌎 </p>
-                </div>
-                <div class="col-sm-4 news-events-page--list-page">
-                    <a href="#" data-toggle="modal" data-target="#carouselModal">
-                        <img src="https://housing.com/news/wp-content/uploads/2023/03/shutterstock_2008709621-1200x700-compressed.jpg" class="img-responsive customimage">
-                    </a>
-                    <h6><a data-toggle="modal" data-target="#carouselModal">Water Pollution Awareness Campaign: Safeguarding Our Blue Planet</a></h6>
-                    <p>Join us in our mission to protect our precious water resources! The Water Pollution Awareness Campaign aims to educate, engage, and empower individuals and communities to take action against water pollution. Together, let’s create ripples of change and ensure clean water for generations to come! 💧🌊</p>
-                </div>
 
-                <div class="col-sm-4 news-events-page--list-page">
-                    <img src="https://as2.ftcdn.net/v2/jpg/02/71/75/59/1000_F_271755921_rxz22woHX5UtWryKTYpGVfVaO2VGkWYS.jpg" class="img-responsive customimage overlay">
-                    </a>
-                    <h6><a data-toggle="modal" data-target="#carouselModal">Stuffed with stuffs</a></h6>
-                    <p>Items shipped to your home often come wrapped in plastic packaging; toys bought at the store are covered in it. Think about what can be bought secondhand, what can be shared, and what doesn’t need to be purchased at all.</p>
-                </div>
-                <div class="col-sm-4 news-events-page--list-page">
-                    <img src="https://sb.ecobnb.net/app/uploads/sites/3/2020/12/cycling-is-healthy.jpg" class="img-responsive customimage overlay">
-                    </a>
-                    <h6><a data-toggle="modal" data-target="#carouselModal">Walk it out</a></h6>
-                    <p>Walk or bike as much as you can. Biking or walking just one mile a day for a year could save 330 pounds of carbon dioxide—that’s the same as planting four trees and letting them grow for 10 years!Together, let’s create a breath of fresh air. Join us with events</p>
-                </div>
-                <div class="col-sm-4 news-events-page--list-page">
-                    <img src="https://europlas.com.vn/Data/Sites/1/News/5368/how-to-recycle-plastic-bottles-(2).jpg" class="img-responsive customimage overlay">
-                    </a>
-                    <h6><a data-toggle="modal" data-target="#carouselModal">Recycle Plastic</a></h6>
-                    <p>According to one study, over eight million tons of plastic pollution end up in the ocean each year. Drink from a refillable water bottle, place your sandwich in cloth or a reusable container, and use bar soap instead of bottled.</p>
-                </div>
             </div>
         </div>
 
