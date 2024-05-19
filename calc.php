@@ -4,7 +4,7 @@ session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
+    header("location: index.php");
     exit;
 }
 ?>
@@ -227,267 +227,294 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
     </div>
 
-
-
-
     <!-- Calculator -->
     <div class="calc-section">
         <div class="section-heading">
             <h4>Calculate your <em>Carbon Footprint </em> here </h4>
+            <h6>Enter last month details :</h6>
         </div>
         <div class="calculator-module">
-
             <div class="calc-quiz">
                 <form id="calculator" class="calc-form-section">
+                    <div class="calc-types">
+                        <div class="household-calc">
+                            <div class="calc-type-title">
+                                <h4>Household Use :</h4>
+                                <i class="fa-solid fa-fire-flame-simple fa-flip fa-2xl" style="color: #ff9500;"></i>
+                            </div>
+                            <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Electricity Bill" name="ebill" id='ebill' onchange="elecfunction()" />
+                                <label class="form__label"><i class="fa-solid fa-bolt fa-2xs" style="color: #FFD43B;"></i>Enter your monthly Electricity bill in units/month:</label>
+                            </div>
+                            <div class="form__group field">
+                                <div id="gaserror" class="bilerr"></div>
+                                <input type="number" class="form__field" placeholder="Gas Bill" name="gasbill" id='gasbill' min="0" max="100" onchange="lpgfunction()" />
+                                <label class="form__label"><img src="attributes/images/gascylinder.png" style="width: 20px;">Number of LPG Cylinders Used for cooking </label>
+                            </div>
+                            <div class="form__group field">
+                                <div id="Coalerror" class="bilerr"></div>
+                                <input type="number" class="form__field" placeholder="Coal Bill" name="coalbill" id='coalbill' min="0" max="9000" onchange="coalfunction()" />
+                                <label class="form__label">
+                                    <img src="attributes/images/coal.png" style="width: 20px;">How much Coal in Kilos used for cooking (If any):
+                                </label>
+                            </div>
+                            <div class="form__group field">
+                                <div id="cngcookerror" class="bilerr"></div>
+                                <input type="number" class="form__field" placeholder="CNG Bill" name="cngcookbill" id='cngcookbill' min="0" max="100" onchange="cngcookfunction()" />
+                                <label class="form__label"><img src="attributes/images/cng.png" style="width: 20px;">Number of CNG Cylinders used at home (If any) : </label>
+                            </div>
+                        </div>
+                        <div class="transport-calc">
+                            <div class="calc-type-title">
+                                <h4>Transportation Use :-</h4>
+                                <i class="fa-solid fa-gas-pump fa-fade fa-2xl" style="color: #9b0303;"></i>
+                            </div>
+                            <div class="form__group field">
+                                <div id="petrolerror" class="bilerr"></div>
+                                <input type="number" class="form__field" placeholder="Mileage Bill" name="mileage" id='petrol' onchange="petrolusage()" min='0' max='99999' />
+                                <label class="form__label"><img src="attributes/images/petrol.png" style="width: 20px;">Enter Litres of Petrol bought (If any):</label>
+                            </div>
+                            <div class="form__group field">
+                                <div id="dieselerror" class="bilerr"></div>
+                                <input type="input" class="form__field" placeholder="Mileage Bill" name="mileage" id='diesel' onchange="dieselusage()" />
+                                <label class="form__label"><img src="attributes/images/diesel.png" style="width: 20px;">Enter Litres of Diesel bought (If any):</label>
+                            </div>
+                            <div class="form__group field">
+                                <div id="cngusageerror" class="bilerr"></div>
+                                <input type="number" class="form__field" placeholder="Mileage Bill" name="CNG fuel" id='cngfuel' onchange="cngusage()" min="0" max="99999" />
+                                <label class="form__label"><img src="attributes/images/cng.png" style="width: 20px;">Enter Kilos of CNG bought (If any):</label>
+                            </div>
+                            <div class="form__group field">
+                                <div id="autolpgerror" class="bilerr"></div>
 
-                    <div class="form__group field">
-                        <input type="input" class="form__field" placeholder="Electricity Bill" name="ebill" id='ebill' onchange="elecfunction()" required />
-                        <label class="form__label">Enter your monthly Electricity bill:</label>
+                                <input type="number" class="form__field" placeholder="Mileage Bill" name="mileage" id='autolpg' onchange="autolgpsusage()" min="0" max="99999" />
+                                <label class="form__label"><img src="attributes/images/lpg.png" style="width: 20px;">Enter number of Auto LGP Cylinders bought (If any):</label>
+                            </div>
+                            <div class="form__group field">
+                                <div id="taxierror" class="bilerr"></div>
+                                <input type="number" class="form__field" placeholder="Taxi Bill" name="taxi" id='taxiid' onchange="taxisusage()" min="0" max="99999" />
+                                <label class="form__label"><img src="attributes/images/taxi.png" style="width: 20px;">Enter Kms you travelled in a taxi (If any):</label>
+                            </div>
+                            <div class="form__group field">
+                                <div id="buserror" class="bilerr"></div>
+                                <input type="number" min="0" max="99999" class="form__field" placeholder="Bus Travel" name="bustravel" id='bus' onchange="bususage()" />
+                                <label class="form__label"><img src="attributes/images/bus.png" style="width: 20px;">Enter Kms you travelled in a bus (If any):</label>
+                            </div>
+                            <div class="form__group field">
+                                <div id="trainerror" class="bilerr"></div>
+                                <input type="number" min="0" max="99999" class="form__field" placeholder="Train travel" name="Train Travel" id='traintravel' onchange="trainusage()" />
+                                <label class="form__label"><img src="attributes/images/train.png" style="width: 20px;">Enter Kms you travelled in a Train (If any):</label>
+                            </div>
+                        </div>
+                        <div class="recycle-calc">
+                            <div class="calc-type-title">
+                                <h4>Waste Management:-</h4>
+                                <i class="fa-solid fa-recycle fa-spin fa-2xl" style="color: #0b6100;"></i>
+                            </div>
+                            <div class="form__group field">
+                                <label class="form__label"><img src="attributes/images/news.png" style="width: 20px;">Do you recycle newspaper ?</label>
+                                <input type="radio" placeholder="newspaper recycle" name="newsrecycle" value="0" style="margin-top:20px" />Yes
+                                <input type="radio" placeholder="newspaper recycle" name="newsrecycle" value="184" style="margin-top:20px;margin-left:30px" />No
+                            </div>
+                            <div class="form__group field">
+                                <label class="form__label"><img src="attributes/images/dustbin.png" style="width: 20px;">Do you recycle Aluminium & Tin ?</label>
+                                <input type="radio" placeholder="newspaper recycle" name="metalrecycle" value="0" style="margin-top:20px" />Yes
+                                <input type="radio" placeholder="newspaper recycle" name="metalrecycle" value="166" style="margin-top:20px;margin-left:30px" />No
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="form__group field">
-                        <div id="gaserror" class="bilerr"></div>
-                        <input type="number" class="form__field" placeholder="Gas Bill" name="gasbill" id='gasbill' min="0" max="16700" onchange="gasfunction()" required />
-                        <label class="form__label">Enter your monthly gas bill (Upto 16,700):</label>
-                    </div>
-
-                    <div class="form__group field">
-                        <div id="oilerror" class="bilerr"></div>
-                        <input type="number" class="form__field" placeholder="Oil Bill" name="oilbill" id='oilbill' min="0" max="37000" onchange="oilfunction()" required />
-                        <label class="form__label">Enter your monthly oil bill (Upto 37,000):</label>
-                    </div>
-
-                    <div class="form__group field">
-                        <input type="input" class="form__field" placeholder="Mileage Bill" name="mileage" id='mileage' onchange="carmileage()" required />
-                        <label class="form__label">Enter your total yearly mileage on your car:</label>
-                    </div>
-
-                    <div class="form__group field">
-                        <input type="input" class="form__field" placeholder="Short Flight Bill" name="sfbill" id='sfbill' onchange="sflights()" required />
-                        <label class="form__label">Average short flights taken past year</label>
-                    </div>
-                    <div class="form__group field">
-                        <input type="input" class="form__field" placeholder="Long Flight Bill" name="lfbill" id='lfbill' onchange="lflights()" required />
-                        <label class="form__label">Average Long flights taken past year</label>
-                    </div>
-                    <div class="form__group field">
-                        <label class="form__label">Do you recycle newspaper ?</label>
-                        <input type="radio" placeholder="newspaper recycle" name="newsrecycle" value="0" required />Yes
-                        <input type="radio" placeholder="newspaper recycle" name="newsrecycle" value="184" required />No
-                    </div>
-                    <div class="form__group field">
-                        <label class="form__label">Do you recycle Aluminium and Tin ?</label>
-                        <input type="radio" placeholder="newspaper recycle" name="metalrecycle" value="0" required />Yes
-                        <input type="radio" placeholder="newspaper recycle" name="metalrecycle" value="166" required />No
-                    </div>
-
-
-                    <button type="submit" class="btn btn-success" style="width: 25%;">Calculate</button>
-
-
+                    <button type="submit" class="btn btn-success" style="width: 90%;">Calculate</button>
                 </form>
-
             </div>
-            <div class="calc-meter">
-                <div class="calc-meters-type">
-                    <div class="electricity">
-                        <p>Electricity</p>
+        </div>
+    </div>
+    <div class="calc-results">
+        <div class="calc-meter">
+            <div class="calc-meters-type">
+                <div class="electricity">
+                    <p>Electricity</p>
 
-                        <div class="bolt">
-                            <svg viewBox="0 0 170 57" class="white left">
-                                <path d="M36.2701759,17.9733192 C-0.981139498,45.4810755 -7.86361824,57.6618438 15.6227397,54.5156241 C50.8522766,49.7962945 201.109341,31.1461782 161.361488,2"></path>
-                            </svg>
-                            <svg viewBox="0 0 170 57" class="white right">
-                                <path d="M36.2701759,17.9733192 C-0.981139498,45.4810755 -7.86361824,57.6618438 15.6227397,54.5156241 C50.8522766,49.7962945 201.109341,31.1461782 161.361488,2"></path>
-                            </svg>
-                            <div>
-                                <span></span>
-                            </div>
-                            <svg viewBox="0 0 112 44" class="circle">
-                                <path d="M96.9355003,2 C109.46067,13.4022454 131.614152,42 56.9906735,42 C-17.6328048,42 1.51790702,13.5493875 13.0513641,2"></path>
-                            </svg>
-                            <svg viewBox="0 0 70 3" class="line left">
-                                <path transform="translate(-2.000000, 0.000000)" d="M2,1.5 L70,1.5"></path>
-                            </svg>
-                            <svg viewBox="0 0 70 3" class="line right">
-                                <path transform="translate(-2.000000, 0.000000)" d="M2,1.5 L70,1.5"></path>
-                            </svg>
-                        </div>
-
-
-
-                        <div id="elecresult" class="fireoil"> MTs</div>
-
-                    </div>
-                    <div class="gas">
-                        <p>Gas</p>
-                        <div class="fire">
-                            <div class="fire-left">
-                                <div class="main-fire"></div>
-                                <div class="particle-fire"></div>
-                            </div>
-                            <div class="fire-center">
-                                <div class="main-fire"></div>
-                                <div class="particle-fire"></div>
-                            </div>
-                            <div class="fire-right">
-                                <div class="main-fire"></div>
-                                <div class="particle-fire"></div>
-                            </div>
-                            <div class="fire-bottom">
-                                <div class="main-fire"></div>
-                            </div>
-                        </div>
-                        <div id="fireresult" class="fireoil"> MTs</div>
-                    </div>
-                    <div class="oil">
-                        <p>Oil</p>
-                        <svg version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" style="display: none;">
-                            <symbol id="wave">
-                                <path d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"></path>
-                                <path d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z"></path>
-                                <path d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z"></path>
-                                <path d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"></path>
-                            </symbol>
+                    <div class="bolt">
+                        <svg viewBox="0 0 170 57" class="white left">
+                            <path d="M36.2701759,17.9733192 C-0.981139498,45.4810755 -7.86361824,57.6618438 15.6227397,54.5156241 C50.8522766,49.7962945 201.109341,31.1461782 161.361488,2"></path>
                         </svg>
-                        <div class="water-jar">
-                            <div class="water-filling">
-                                <div class="percentNum" id="count" oninput="oilanimate()"></div>
-
-                                <div class="percentB">MTs</div>
-                            </div>
-                            <div id="water" class="water">
-                                <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
-                                    <use xlink:href="#wave"></use>
-                                </svg>
-                                <svg viewBox="0 0 560 20" class="water_wave water_wave_front">
-                                    <use xlink:href="#wave"></use>
-                                </svg>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-                </div>
-
-
-                <div class="calc-meters-type">
-                    <div class="car">
-                        <p>Car Mileage</p>
-                        <svg width="200" height="140" viewBox="0 0 450 300" class="car-progress" fill="#fff" stroke="#444" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-                            <defs>
-                                <g id="spot" transform="translate(225 165)">
-                                    <circle r="120" stroke-width="4" />
-                                    <path d="m-120 60h240" />
-                                    <path stroke-width="6" d="m135 60h20" />
-                                </g>
-                                <path id="cloud" d="m0 0a22 22 0 0 1 30 -20a32 32 0 0 1 55 20z" />
-                                <g id="wheel">
-                                    <circle r="22" stroke-width="6" />
-                                    <circle r="13" stroke-width="4" />
-                                    <path class="wheel-shine" stroke-width="2" d="m-2 -8a8 8 0 0 1 10 10" />
-                                </g>
-                            </defs>
-                            <g class="bg">
-                                <mask id="spot-mask">
-                                    <use xlink:href="#spot" />
-                                </mask>
-                                <path stroke-width="0" fill="#aab" class="asphalt-dark" d="M30 225h320v75h-270z" mask="url(#spot-mask)" />
-                                <path stroke-width="0" fill="#ccd" class="asphalt-light" d="M30 225l320 50v25h-270z" mask="url(#spot-mask)" />
-                                <use fill="none" xlink:href="#spot" />
-                                <circle class="sun" r="40" cx="150" cy="80" />
-                            </g>
-                            <g class="clouds">
-                                <g id="cloud-3" transform="translate(110 0)">
-                                    <use xlink:href="#cloud" transform="translate(40 110) scale(-0.6 0.6)" />
-                                </g>
-                                <g id="cloud-2" transform="translate(250 0)">
-                                    <use xlink:href="#cloud" transform="translate(40 80) scale(-0.6 0.6)" />
-                                </g>
-                                <g id="cloud-1" transform="translate(270 0)">
-                                    <use xlink:href="#cloud" transform="translate(0 120)" />
-                                </g>
-                            </g>
-                            <g class="car" transform="translate(225 175)">
-                                <path class="windows" d="m5 -5v-35h35 q12 0 20 10l15 25h-130l15 -25q8 -10 20 -10h25" />
-                                <path class="body" stroke-width="6" d="m5 -5h72v55h-15a22 22 0 0 0 -44 0h-30a22 22 0 0 0 -44 0h-25v-20q0 -25 25 -35z" />
-                                <circle class="eye" stroke-width="6" r="4" cx="-66" cy="18" />
-                                <path class="mouth" stroke-width="4" d="m-77 40q5 0 10 -5" />
-                                <g transform="translate(-34 50)">
-                                    <use xlink:href="#wheel" class="spinning" />
-                                </g>
-                                <g transform="translate(40 50)">
-                                    <use xlink:href="#wheel" class="spinning" />
-                                </g>
-                            </g>
+                        <svg viewBox="0 0 170 57" class="white right">
+                            <path d="M36.2701759,17.9733192 C-0.981139498,45.4810755 -7.86361824,57.6618438 15.6227397,54.5156241 C50.8522766,49.7962945 201.109341,31.1461782 161.361488,2"></path>
                         </svg>
-
-                        <div id="mileagebill" class="fireoil"> MTs</div>
-
+                        <div>
+                            <span></span>
+                        </div>
+                        <svg viewBox="0 0 112 44" class="circle">
+                            <path d="M96.9355003,2 C109.46067,13.4022454 131.614152,42 56.9906735,42 C-17.6328048,42 1.51790702,13.5493875 13.0513641,2"></path>
+                        </svg>
+                        <svg viewBox="0 0 70 3" class="line left">
+                            <path transform="translate(-2.000000, 0.000000)" d="M2,1.5 L70,1.5"></path>
+                        </svg>
+                        <svg viewBox="0 0 70 3" class="line right">
+                            <path transform="translate(-2.000000, 0.000000)" d="M2,1.5 L70,1.5"></path>
+                        </svg>
                     </div>
 
-                    <div class="flight">
-                        <p>Flights</p>
-                        <div class="loading-flight-animation">
-                            <div class="cloud cloud-1">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="cloud cloud-2">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="cloud cloud-3">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <i class="fa-solid fa-plane fa-2l" style="color: #74C0FC;"></i>
 
-                            <div class="stars">
-                                <svg class='star star-1' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
-                                    <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z' fill='#f1c40f'>
-                                </svg>
-                                <svg class='star star-2' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
-                                    <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z' fill='#f1c40f'>
-                                </svg>
-                                <svg class='star star-3' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
-                                    <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z' fill='#f1c40f'>
-                                </svg>
+
+                    <div id="elecresult" class="fireoil"> </div>
+                    <div id="co2measure" class="fireoils"> KgCO<sub>2</sub>e</div>
+
+                </div>
+                <div class="gas">
+                    <p>Gas</p>
+                    <div class="fire">
+                        <div class="fire-left">
+                            <div class="main-fire"></div>
+                            <div class="particle-fire"></div>
+                        </div>
+                        <div class="fire-center">
+                            <div class="main-fire"></div>
+                            <div class="particle-fire"></div>
+                        </div>
+                        <div class="fire-right">
+                            <div class="main-fire"></div>
+                            <div class="particle-fire"></div>
+                        </div>
+                        <div class="fire-bottom">
+                            <div class="main-fire"></div>
+                        </div>
+                    </div>
+                    <div id="fireresult" class="fireoil"> </div>
+                    <div id="co2measure" class="fireoils"> KgCO<sub>2</sub>e</div>
+                </div>
+                <!-- <div class="oil">
+                    <p>Oil</p>
+                    <svg version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" style="display: none;">
+                        <symbol id="wave">
+                            <path d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"></path>
+                            <path d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z"></path>
+                            <path d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z"></path>
+                            <path d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"></path>
+                        </symbol>
+                    </svg>
+                    <div class="water-jar">
+                        <div class="water-filling">
+                            <div class="percentNum" id="count" oninput="oilanimate()"></div>
+
+                            <div class="percentB">MTs</div>
+                        </div>
+                        <div id="water" class="water">
+                            <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
+                                <use xlink:href="#wave"></use>
+                            </svg>
+                            <svg viewBox="0 0 560 20" class="water_wave water_wave_front">
+                                <use xlink:href="#wave"></use>
+                            </svg>
+                        </div>
+                    </div>
+
+
+
+                </div> -->
+                <div class="flight">
+                    <p>Transportation</p>
+                    <div class="loading-flight-animation">
+                        <div class="cloud cloud-1">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="cloud cloud-2">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="cloud cloud-3">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <i class="fa-solid fa-plane fa-2l" style="color: #74C0FC;"></i>
+
+                        <div class="stars">
+                            <svg class='star star-1' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
+                                <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z' fill='#f1c40f'>
+                            </svg>
+                            <svg class='star star-2' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
+                                <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z' fill='#f1c40f'>
+                            </svg>
+                            <svg class='star star-3' height='19' viewBox='0 0 19 19' width='19' xmlns='http://www.w3.org/2000/svg'>
+                                <path d='M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z' fill='#f1c40f'>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="transport" class="fireoil"> </div>
+                    <div id="co2measure" class="fireoils"> KgCO<sub>2</sub>e</div>
+                </div>
+                <div class="recycle">
+                    <p>Waste Recycle</p>
+                    <div class="dustbin-wrapper" :class="{'blue' : blue}">
+                        <div class="dustbin">
+                            <div class="dustbin-design"></div>
+                            <div class="dustbin-design"></div>
+                            <div class="dustbin-design"></div>
+                            <div class="dustbin-design"></div>
+                            <div class="dustbin-design"></div>
+                            <div class="dustbin-design"></div>
+                            <div class="dustbin-design"></div>
+                            <div class="dustbin-design"></div>
+                            <div class="recycle-wrapper">
+                                <div class="recycle-logo">&#9851;</div>
+                            </div>
+                            <div class="dustbin-wrapper-2">
+                                <div class="dustbin-design-2"></div>
+                                <div class="dustbin-design-2"></div>
+                                <div class="dustbin-design-2"></div>
+                                <div class="dustbin-design-2"></div>
+                                <div class="dustbin-design-2"></div>
+                                <div class="dustbin-design-2"></div>
+                                <div class="dustbin-design-2"></div>
+                                <div class="dustbin-design-2"></div>
                             </div>
                         </div>
-                        <div id="airresult" class="fireoil">0</div>
-
-
-
                     </div>
-
-
-                    <div class="recycle">
-                        <p>Waste Recycle</p>
-                        <section>
-                            <span class="trash">
-                                <span></span>
-                                <i></i>
-                            </span>
-                        </section>
-                        <div id="recycleresult" class="fireoil">MTs</div>
-                    </div>
+                    <div id="recycleresult" class="fireoil"> </div>
+                    <div id="co2measure" class="fireoils"> KgCO<sub>2</sub>e</div>
                 </div>
+            </div>
+        </div>
 
-                <div class="calc-metars-type">
-                    <div id="result" class="resilt"></div>
-                    <div id="msg" class="messagecarbon"></div>
+        <div class="calc-output-section">
+            <div class="calc-metars-type">
+                <div id="result" class="resilt"></div>
+                <div id="resultkg" class="resultinkg"></div>
+                <div id="resultmetric" class="resultinmetrictons"></div>
+                <div id="msg" class="messagecarbon"></div>
+            </div>
+            <div class="calc-metars-result-bar">
+                <div class="alert-box calc-result-box" id="alert-result">
+                    <i class="fa-solid fa-down-long fa-beat-fade" style="color: #ff0000;font-size:50px"></i>
+                    <h5 class="alert-msg">You contribute tooo much carbon.Please take necessary steps</h5>
+                    <h6 class="alert-msg">Learn more about how to reduce your carbon footprint.</h6>
+                    <a class="read-more alert-btn-clr" href="edu.php">Read More</a>
                 </div>
-
-
+                <div class="warning-box calc-result-box" id="warning-result">
+                    <i class="fa-solid fa-triangle-exclamation fa-beat-fade" style="color: #ffae00;font-size:50px"></i>
+                    <h5 class="warning-msg">You are an average contributer of carbon. If possible take necessary steps</h5>
+                    <h6 class="warning-msg">Tips to reduce your carbon footprint.</h6>
+                    <a class="read-more warning-btn-clr" href="edu.php">Read More</a>
+                </div>
+                <div class="ideal-box calc-result-box" id="ideal-result">
+                    <i class="fa-brands fa-pagelines fa-fade fa-2xl" style="color: #19a706;font-size:50px"></i>
+                    <h5 class="ideal-msg">You are an Ideal contributer of carbon.If possible maintain your score</h5>
+                    <h6 class="ideal-msg">Check our portal for more information.</h6>
+                    <a class="read-more ideal-btn-clr" href="edu.php">Read More</a>
+                </div>
+                <div class="congrats-box calc-result-box" id="congrates">
+                    <i class="fa-solid fa-earth-americas fa-2xl" style="color: #4b9bd8;font-size:50px;"></i>
+                    <h5 class="congrats">You are an Ideal contributer of carbon.If possible maintain your score</h5>
+                    <h6 class="congrats">Check our portal for more information.</h6>
+                    <a class="read-more ideal-btn-clr" href="edu.php">Read More</a>
+                </div>
             </div>
         </div>
 
@@ -511,12 +538,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <script src="attributes/js/calc.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="attributes/js/easing.min.js"></script>
+    <!-- <script src="attributes/js/easing.min.js"></script>
     <script src="attributes/js/waypoints.min.js"></script>
-    <script src="attributes/js/owl.carousel.min.js"></script>
+    <script src="attributes/js/owl.carousel.min.js"></script> -->
 
     <!-- Template Javascript -->
-    <script src="attributes/js/main.js"></script>
+    <!-- <script src="attributes/js/main.js"></script> -->
     <script>
         $('.bolt').each(function(e) {
 

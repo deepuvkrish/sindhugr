@@ -1,0 +1,755 @@
+body{
+    padding: 0px 40px;
+}
+
+.edu_section{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+.edu_section_1{
+    padding: 30px;
+    margin-top: 7pc;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 560px;
+    position: relative;
+
+}
+.main_video_section{
+    display: flex;
+    width: 70%;
+    position: relative;
+
+}
+.side_suggestions{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    max-height: 560px;
+    overflow-y: scroll;
+   
+
+}
+.suggestion_thumb{
+    cursor: pointer;
+    padding: 4px 8px;
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(26, 26, 26, 0.169);
+    border-left: 1px solid rgba(255,255,255, .5);
+    border-right: 1px solid rgba(255,255,255, .1);
+    border-bottom: 1px solid rgba(36, 36, 36, 0.3);
+    background: rgb(1 16 10 / 65%);
+    color: rgba(254, 254, 254, 0.715);
+    transition: 300ms;
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
+    
+}
+.suggestion_thumb::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .suggestion_thumb::-webkit-scrollbar-track {
+    background-color: darkgrey;
+  }
+  .suggestion_thumb::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+.suggestion_thumb:hover{
+    background: rgba(3, 72, 67, 0.724);
+    color: rgba(255,255,255,.8);
+    transform:scale(1);
+
+
+}
+
+
+.edu_section_2{
+    padding: 30px;
+}
+.big_thumbs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.big_thumbs_2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.small_thumbs{
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+.bthumb{
+    display:flex ;
+    flex-direction: column;
+}
+
+
+#video2, #video3, #video4, #video5, #video6{
+    position: absolute;
+    display: none;
+}
+
+
+
+#DIV_1 {
+    color: rgb(17, 17, 17);
+    height: 505.313px;
+    text-size-adjust: 100%;
+    width: 1100px;
+    column-rule-color: rgb(17, 17, 17);
+    perspective-origin: 550px 252.656px;
+    transform-origin: 550px 252.656px;
+    border: 0px none rgb(17, 17, 17);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0px 0px 24px;
+    outline: rgb(17, 17, 17) none 0px;
+}/*#DIV_1*/
+
+#DIV_1:after {
+    clear: both;
+    color: rgb(17, 17, 17);
+    content: '';
+    display: table;
+    text-size-adjust: 100%;
+    column-rule-color: rgb(17, 17, 17);
+    border: 0px none rgb(17, 17, 17);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(17, 17, 17) none 0px;
+}/*#DIV_1:after*/
+
+#DIV_1:before {
+    color: rgb(17, 17, 17);
+    content: '';
+    display: table;
+    text-size-adjust: 100%;
+    column-rule-color: rgb(17, 17, 17);
+    border: 0px none rgb(17, 17, 17);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(17, 17, 17) none 0px;
+}/*#DIV_1:before*/
+
+#DIV_2 {
+    box-sizing: border-box;
+    color: rgb(17, 17, 17);
+    float: left;
+    height: 505.313px;
+    text-size-adjust: 100%;
+    width: 1100px;
+    column-rule-color: rgb(17, 17, 17);
+    perspective-origin: 550px 252.656px;
+    transform-origin: 550px 252.656px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box padding-box;
+    border: 0px solid rgba(0, 0, 0, 0);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(17, 17, 17) none 0px;
+    padding: 0px 11px;
+}/*#DIV_2*/
+
+#DIV_3 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    height: 505.313px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 1078px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 539px 252.656px;
+    transform-origin: 539px 252.656px;
+    background: rgb(21, 21, 21) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_3*/
+
+#DIV_4 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    float: left;
+    height: 505px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 858px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 429px 252.5px;
+    transform-origin: 429px 252.5px;
+    background: rgb(21, 21, 21) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+}/*#DIV_4*/
+
+#DIV_5 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    height: 505px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 858px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 429px 252.5px;
+    transform: matrix(1, 0, 0, 1, -858, 0);
+    transform-origin: 429px 252.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: all 0.84s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+}/*#DIV_5*/
+
+#DIV_6 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    height: 505px;
+    left: 2574px;
+    position: absolute;
+    right: -2574px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 858px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 429px 252.5px;
+    transform-origin: 429px 252.5px;
+    background: rgb(21, 21, 21) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+}/*#DIV_6*/
+
+#DIV_7, #DIV_13, #DIV_26 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    float: left;
+    height: 505px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 858px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 429px 252.5px;
+    transform-origin: 429px 252.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 0px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+}/*#DIV_7, #DIV_13, #DIV_26*/
+
+#IMG_8, #IMG_14, #IMG_27 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    display: block;
+    height: 505px;
+    left: 0px;
+    position: absolute;
+    right: -20px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 898px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 449px 252.5px;
+    transform-origin: 449px 252.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 0px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0px 0px 0px -20px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#IMG_8, #IMG_14, #IMG_27*/
+
+#DIV_9, #DIV_15, #DIV_21, #DIV_28 {
+    bottom: 220.5px;
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    height: 32px;
+    left: 429px;
+    position: absolute;
+    right: 397px;
+    text-size-adjust: 100%;
+    top: 252.5px;
+    width: 32px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 16px 16px;
+    transform-origin: 16px 16px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 0px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_9, #DIV_15, #DIV_21, #DIV_28*/
+
+#DIV_10, #DIV_16, #DIV_22, #DIV_29 {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 64px;
+    text-size-adjust: 100%;
+    width: 64px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 32px 32px;
+    transform-origin: 32px 32px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 0px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: -32px 0px 0px -32px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_10, #DIV_16, #DIV_22, #DIV_29*/
+
+#DIV_11, #DIV_17, #DIV_23, #DIV_30 {
+    background-position: 0px -32px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 64px;
+    text-size-adjust: 100%;
+    width: 64px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 32px 32px;
+    transform-origin: 32px 32px;
+    background: rgba(0, 0, 0, 0.74902) url("http://dimsemenov.com/plugins/royal-slider/royalslider/skins/default/rs-default.png") no-repeat scroll 0px -32px / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal normal normal 14px / 0px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: all 0.3s ease 0s;
+}/*#DIV_11, #DIV_17, #DIV_23, #DIV_30*/
+
+#DIV_12 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    height: 505px;
+    left: 3432px;
+    position: absolute;
+    right: -3432px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 858px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 429px 252.5px;
+    transform-origin: 429px 252.5px;
+    background: rgb(21, 21, 21) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+}/*#DIV_12*/
+
+#DIV_18 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    height: 505px;
+    left: 858px;
+    position: absolute;
+    right: -858px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 858px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 429px 252.5px;
+    transform-origin: 429px 252.5px;
+    background: rgb(21, 21, 21) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+}/*#DIV_18*/
+
+#DIV_19 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    float: left;
+    height: 505px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 858px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 429px 252.5px;
+    transform-origin: 429px 252.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 0px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+    transition: opacity 0.4s ease-in-out 0s;
+}/*#DIV_19*/
+
+#IMG_20 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    display: block;
+    height: 506px;
+    left: 0px;
+    position: absolute;
+    right: -21px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 901px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 450.5px 253px;
+    transform-origin: 450.5px 253px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 0px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: -1px 0px 0px -22px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#IMG_20*/
+
+#DIV_24 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    height: 505px;
+    left: 1716px;
+    position: absolute;
+    right: -1716px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 858px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 429px 252.5px;
+    transform-origin: 429px 252.5px;
+    background: rgb(21, 21, 21) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+}/*#DIV_24*/
+
+#DIV_25 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    height: 505px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 858px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 429px 252.5px;
+    transform-origin: 429px 252.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_25*/
+
+#H3_31 {
+    color: rgb(255, 255, 255);
+    cursor: url("http://dimsemenov.com/plugins/royal-slider/royalslider/grab.png") 8 8, move;
+    display: none;
+    height: auto;
+    left: 3%;
+    max-width: 400px;
+    position: absolute;
+    text-size-adjust: 100%;
+    top: 1%;
+    width: 100%;
+    z-index: 15;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 20px / 24px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 22px 0px 12px;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: -webkit-transform 0s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, opacity 0s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+}/*#H3_31*/
+
+#DIV_32 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 505.313px;
+    left: 858px;
+    position: absolute;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 220px;
+    z-index: 22;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 110px 252.656px;
+    transform-origin: 110px 252.656px;
+    user-select: none;
+    background: rgb(21, 21, 21) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+    transition: opacity 0.3s linear 0s;
+}/*#DIV_32*/
+
+#DIV_33 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 567px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 220px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 110px 283.5px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transform-origin: 110px 283.5px;
+    user-select: none;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: -webkit-transform 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+}/*#DIV_33*/
+
+#DIV_34 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    float: left;
+    height: 80px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 220px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 110px 40.5px;
+    transform-origin: 110px 40.5px;
+    user-select: none;
+    background: rgb(2, 135, 74) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-top: 0px none rgb(255, 255, 255);
+    border-right: 0px none rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(46, 46, 46);
+    border-left: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+}/*#DIV_34*/
+
+#DIV_35, #DIV_39, #DIV_43, #DIV_47, #DIV_51, #DIV_55, #DIV_59 {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 41px;
+    text-size-adjust: 100%;
+    width: 180px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 110px 40.5px;
+    transform-origin: 110px 40.5px;
+    user-select: none;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 20px;
+}/*#DIV_35, #DIV_39, #DIV_43, #DIV_47, #DIV_51, #DIV_55, #DIV_59*/
+
+#H5_36, #H5_40, #H5_44, #H5_48, #H5_52, #H5_56, #H5_60 {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 20px;
+    text-size-adjust: 100%;
+    width: 180px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 90px 10px;
+    transform-origin: 90px 10px;
+    user-select: none;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal bold normal 16px / 20px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#H5_36, #H5_40, #H5_44, #H5_48, #H5_52, #H5_56, #H5_60*/
+
+#SPAN_37, #SPAN_41, #SPAN_45, #SPAN_49, #SPAN_53, #SPAN_57, #SPAN_61 {
+    color: rgb(221, 221, 221);
+    cursor: pointer;
+    text-size-adjust: 100%;
+    column-rule-color: rgb(221, 221, 221);
+    user-select: none;
+    border: 0px none rgb(221, 221, 221);
+    font: normal normal normal normal 13px / 18px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(221, 221, 221) none 0px;
+}/*#SPAN_37, #SPAN_41, #SPAN_45, #SPAN_49, #SPAN_53, #SPAN_57, #SPAN_61*/
+
+#DIV_38, #DIV_42, #DIV_50, #DIV_58 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    float: left;
+    height: 80px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 220px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 110px 40.5px;
+    transform-origin: 110px 40.5px;
+    user-select: none;
+    border-top: 0px none rgb(255, 255, 255);
+    border-right: 0px none rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(46, 46, 46);
+    border-left: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+}/*#DIV_38, #DIV_42, #DIV_50, #DIV_58*/
+
+#DIV_46, #DIV_54 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    float: left;
+    height: 80px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 220px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 110px 40.5px;
+    transform-origin: 110px 40.5px;
+    user-select: none;
+    border-top: 0px none rgb(255, 255, 255);
+    border-right: 0px none rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(46, 46, 46);
+    border-left: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+}/*#DIV_46, #DIV_54*/
+
+#DIV_62 {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: none;
+    height: 20px;
+    left: 0px;
+    position: absolute;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 100%;
+    z-index: 21;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.74902) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: opacity 0.3s linear 0s;
+}/*#DIV_62*/
+
+#DIV_63 {
+    background-position: -144px -32px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 16px;
+    left: 50%;
+    position: absolute;
+    text-size-adjust: 100%;
+    top: 50%;
+    width: 16px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    user-select: none;
+    background: rgba(0, 0, 0, 0) url("http://dimsemenov.com/plugins/royal-slider/royalslider/skins/default/rs-default.png") repeat scroll -144px -32px / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: -8px 0px 0px -8px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_63*/
+
+#DIV_64 {
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 20px;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 485.313px;
+    width: 220px;
+    z-index: 21;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 110px 10px;
+    transform-origin: 110px 10px;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.74902) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: opacity 0.3s linear 0s;
+}/*#DIV_64*/
+
+#DIV_65 {
+    background-position: -144px -48px;
+    bottom: 2px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 16px;
+    left: 110px;
+    position: absolute;
+    right: 102px;
+    text-size-adjust: 100%;
+    top: 10px;
+    width: 16px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 8px 8px;
+    transform-origin: 8px 8px;
+    user-select: none;
+    background: rgba(0, 0, 0, 0) url("http://dimsemenov.com/plugins/royal-slider/royalslider/skins/default/rs-default.png") repeat scroll -144px -48px / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px / 21px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: -8px 0px 0px -8px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_65*/
+
+
+
+/* taking care of responsive layout */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .single-video {
+    width: 10rem;
+    flex-grow: 1;
+    margin: 0.5rem;
+  }
+  
+  /* taking care of the video aspect-ratio */
+  figure {
+    position: relative;
+    padding: 0 0 56.25% 0;
+  }
+  
+  figure iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
