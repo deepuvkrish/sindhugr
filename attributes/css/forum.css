@@ -1,3 +1,22 @@
+
+@media (max-width:1400px) {
+    .search-banner .custom-search-banner-wrap.custom-search-banner-wrap {
+        margin: 0 auto;
+        height: 175px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media (min-width:1400px) {
+    .search-banner .custom-search-banner-wrap.custom-search-banner-wrap {
+        margin: 0 auto;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 .search-banner {
     margin-top: 6pc;
     background-image: var(--custom-bg);
@@ -8,13 +27,7 @@
 .search-banner .custom-search-banner {
     margin-bottom: 24px;
 }
-.search-banner .custom-search-banner-wrap.custom-search-banner-wrap {
-    margin: 0 auto;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
 
 .custom-search-banner-wrap {
     box-sizing: border-box;

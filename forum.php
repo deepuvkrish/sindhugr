@@ -61,22 +61,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link " href="home.php">Home</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="calc.php">Carbon Footprint Calculator</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link " href="edu.php">Educational Content</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="green.php">Green Shopping</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link navbar-active" href="forum.php">Community Forum</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="events.php">Events and Campaigns</a>
                     </li>
                 </ul>

@@ -61,22 +61,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link " href="home.php">Home</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link navbar-active" href="calc.php">Carbon Footprint Calculator</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="edu.php">Educational Content</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="green.php">Green Shopping</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="forum.php">Community Forum</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="events.php">Events and Campaigns</a>
                     </li>
                 </ul>
@@ -103,7 +103,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
     </nav>
 
-    <div class="calc-header" style="margin-top:150px">
+    <div class="calc-header">
         <h1 class="poppins-bold calc-title">Carbon Footprint</h1>
         <p class="poppins-medium">The carbon footprint represents the total volume of greenhouse gases (GG) resulting from everyday economic and human activity. Knowing the carbon footprint of an activity, which is measured in tons of CO2 emissions, is important when it comes to taking measures and launching initiatives to reduce it to the lowest possible level. It all starts with what each individual does every day.</p>
     </div>

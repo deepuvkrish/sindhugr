@@ -62,22 +62,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link " href="home.php">Home</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="calc.php">Carbon Footprint Calculator</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link " href="edu.php">Educational Content</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link navbar-active" href="green.php">Green Shopping</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link " href="forum.php">Community Forum</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="events.php">Events and Campaigns</a>
                     </li>
                 </ul>
@@ -385,7 +385,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 </ul>
                             </div>
                             <div class="featured__item__text">
-                                <h6><a href="#">Pro Planet Item</a></h6>
+                                <h6><a href="#">Organic Mandya</a></h6>
                                 <h5>₹30.00</h5>
                             </div>
                         </div>

@@ -62,22 +62,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link " href="home.php">Home</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="calc.php">Carbon Footprint Calculator</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link " href="edu.php">Educational Content</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="green.php">Green Shopping</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="forum.php">Community Forum</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link navbar-active" href="events.php">Events and Campaigns</a>
                     </li>
                 </ul>
@@ -111,46 +111,34 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 
     <div class="event">
-
-
-
         <div class="content video-gallery-edu">
-
             <div class="section-header">
                 <div class="section-heading">
                     <h4 class="poppins-semibold">Events <em>and </em> Campaigns </h4>
                 </div>
             </div>
 
-
-
             <div class="video-gallery">
-
                 <div class="gallery-item ">
-                    <img src="https://www.logicallyfacts.com/hubfs/view-green-forest-trees-with-co2.jpg" alt="CO2 Emmision" />
+                    <img src="https://miro.medium.com/v2/resize:fit:626/0*x8A4BLPfImlj69H9.jpg" alt="CO2 Emmision" />
                     <div class="gallery-item-caption">
                         <!--<div>-->
-                        <h2>Global Growth in Emissions</h2>
-                        <p>Despite disruptions caused by the global energy crisis, global energy-related CO2 emissions grew by 0.9%
-                            or 321 Mt in 2022, reaching a new high of over 36.8 Gt.
-                            This growth was much slower than the sharp rebound observed in 2021 (over 6%) due to the Covid-19
-                            pandemic.</p>
+                        <h2>World Wetlands Day</h2>
+                        <p>World Wetlands Day is celebrated every year on 2 February. This day marks the date of the adoption of the Convention on Wetlands on 2 February 1971, in the Iranian city of Ramsar on the shores of the Caspian Sea.</p>
                         <!--</div>-->
-                        <a class="vimeo-popup" href="#"></a>
+                        <a class="vimeo-popup" href="https://www.ramsar.org/our-work/activities/world-wetlands-day"></a>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://media.istockphoto.com/id/1141520118/photo/ecological-catastrophy.jpg?s=612x612&w=0&k=20&c=hPbX_vmideFRGfEeOKQhusIrlmc31H2G9pPlT3yTCEw=" alt="Air Pollution Awareness Campaign:
+                    <img src="https://media.assettype.com/freepressjournal/2024-05/1870a07a-a652-4a17-9b3c-f79532379c75/Untitled_design___2024_05_15T212632_531.jpg" alt="Air Pollution Awareness Campaign:
                     Breathe Clean, Live Green" />
                     <div class="gallery-item-caption">
                         <!--<div>-->
-                        <h2>Air Pollution Awareness Campaign:
-                            Breathe Clean, Live Green</h2>
-                        <p>Gain knowledge about air pollution’s impact on health and ecosystems.
-                            Connect with like-minded individuals and organization. Be part of a collective effort to create a cleaner, healthier future.Registration: Visit our website to register and receive event updates. Let’s breathe clean, live green, and protect our planet together! 🌿🌎</p>
+                        <h2>'Plastic-Free Sahyadri' Initiative To Clean Up Malshej Ghat</h2>
+                        <p>With an aim to create awareness amongst tourists and travellers to protect nature from pollution so that wildlife live trash free a ‘Plastic Sahyadri’ campaign at the Malshej Ghat has been launched.🌿🌎</p>
                         <!--</div>-->
-                        <a class="vimeo-popup" href="#"></a>
+                        <a class="vimeo-popup" href="https://timesofindia.indiatimes.com/city/navi-mumbai/greens-launch-campaign-to-make-sahyadri-plastic-free/articleshow/110219887.cms"></a>
                     </div>
                 </div>
 

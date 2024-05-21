@@ -2,19 +2,37 @@ body{
   background: #d9ffe6 !important;
 }
 
+@media only screen and (max-width: 1400px) {
+  .logo-title-nav{
+    font-size: 20px;
+      color: rgb(54 131 4);
+    font-weight: 800;
+    }
+    .logo-title-nav-lower{
+      font-size: 14px;
+      color: rgb(0, 0, 0);
+      font-weight: 800;
+      }
+     
+  
+}@media only screen and (min-width: 1400px) {
+  .logo-title-nav{
+    font-size: 30px;
+      color: rgb(54 131 4);
+    font-weight: 800;
+    }
+    .logo-title-nav-lower{
+      font-size: 20px;
+      color: rgb(0, 0, 0);
+      font-weight: 800;
+      }
+  
+}
 .user-name{
 	text-transform: capitalize;
 }
-.logo-title-nav{
-	font-size: 30px;
-    color: rgb(54 131 4);
-	font-weight: 800;
-  }
-  .logo-title-nav-lower{
-	font-size: 20px;
-	color: rgb(0, 0, 0);
-	font-weight: 800;
-  }
+
+  
   .righteous-regular {
 	font-family: "Righteous", sans-serif;
 	font-weight: 400;
@@ -570,9 +588,9 @@ body{
     padding: 10px 15px;
     font-weight: 400;
     font-family: 'Fredoka', sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     transition: .5s;
-}
+    text-align: center;}
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active,

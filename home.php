@@ -60,22 +60,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link navbar-active" href="home.php">Home</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="calc.php">Carbon Footprint Calculator</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="edu.php">Educational Content</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="green.php">Green Shopping</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="forum.php">Community Forum</a>
                     </li>
-                    <li class="nav-item ps-5">
+                    <li class="nav-item ps-3">
                         <a class="nav-link" href="events.php">Events and Campaigns</a>
                     </li>
                 </ul>
@@ -123,7 +123,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </div>
             </div>
         </div>
-        <rssapp-ticker id="tJaNJIVTVRN6IqK3"></rssapp-ticker>
+        <rssapp-ticker id="twatYDeumtjuUZ6v"></rssapp-ticker>
         <script src="https://widget.rss.app/v1/ticker.js" type="text/javascript" async></script>
     </section>
     <!-- Page info section -->
@@ -189,12 +189,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <section style="background-color: #f8f9fa; flex: 1; padding: 2rem;">
             <h2 style="color: #4CAF50;margin-left: 33px;">Latest Articles</h2>
             <!-- RSS NEWS FEED GENERATOR -->
-            <rssapp-list id="t8ooda7zN1tZDMLI"></rssapp-list>
+            <rssapp-list id="tcPD5zisG8PUvwSz"></rssapp-list>
             <script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
         </section>
         <section style="background-color: #f8f9fa; flex: 1; padding: 2rem;">
             <h2 style="color: #4CAF50;margin-left: 33px;">Top Trending</h2>
-            <rssapp-imageboard id="t25uZZ5kRIobxvXS"></rssapp-imageboard>
+            <rssapp-imageboard id="tZpEbrgg83e6Unyo"></rssapp-imageboard>
             <script src="https://widget.rss.app/v1/imageboard.js" type="text/javascript" async></script>
         </section>
 

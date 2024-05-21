@@ -1,27 +1,111 @@
 body{
-    padding: 0px 40px;
+  padding: 0px 40px;
 }
-.calc-header{
+@media only screen and (max-width: 1400px) {
+  table {
+    width: 600px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.32);
+    border-radius: 10px;
+    font-size: 12px;
+  }
+  .calc-title {
+    font-size: 65px;
+    margin-bottom: 25px;
+    color: #fff;
+    text-shadow: 1px 1px 5px #000;
+  }
+  .calc-header{
     display: flex;
     flex-direction: column;
     height: 230px;
     background: linear-gradient(to bottom, #368304, #003f4e);
     border-radius: 100px 0px 100px 0px;
     padding: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
+    margin-top:100px
+  }
+  .calc-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5px;
+    padding: 0px 30px 30px 30px;
+    background: url('../images/calcback1.jpg');
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .form__group {
+    position: relative;
+    padding: 7px 0 0;
+    margin-top: 10px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 12px;
+    cursor: text;
+    top: -5px;
+  }
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 12px;
+    color: #194c48;
+  }
+   .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 13px;
+    color: #3d3d3d;
+    font-weight: 700;
+  }
+  
+
+  
 }
-.calc-title{
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1400px) {
+  table {
+    width:750px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.32);
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  .calc-title{
     font-size: 80px;
     margin-bottom: 25px;
     color: #fff;
     text-shadow: 1px 1px 5px #000;
-}
-.calc-header p{
-    font-weight: 500;
-    font-family:Arial, Helvetica, sans-serif;
-    color: white;
-}
-.calc-section{
+    }
+  .calc-header{
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    background: linear-gradient(to bottom, #368304, #003f4e);
+    border-radius: 100px 0px 100px 0px;
+    padding: 30px;
+    margin-bottom: 50px;
+    margin-top:150px;
+  }
+  .calc-section{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -32,7 +116,63 @@ body{
     background-position: center;
     align-items: center;
     justify-content: center;
+  }
+  .form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 16px;
+    cursor: text;
+    top: -12px;
+  }
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 14px;
+    color: #194c48;
+  }
+  
+   .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #3d3d3d;
+    font-weight: 700;
+  }
+  
+
+  
 }
+
+
+
+
+
+
+
+
+
+
+
+.calc-type-title h4{
+  font-size: 15px !important;
+}
+
+
+.calc-header p{
+    font-weight: 500;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+}
+
 
 .section-heading{
   text-align: center;
@@ -353,13 +493,6 @@ body{
 	transform: translate(-50%, -50%);
 }
 
-table {
-	width: 800px;
-	border-collapse: collapse;
-	overflow: hidden;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.32);
-    border-radius: 10px;
-}
 
 th,
 td {
@@ -404,13 +537,7 @@ tbody {
 
 
 
-.form__group {
-    position: relative;
-    padding: 15px 0 0;
-    margin-top: 10px;
-    width: 90%;
-    margin-bottom: 20px;
-  }
+
   
   .form__field {
     font-family: inherit;
@@ -427,20 +554,8 @@ tbody {
   .form__field::placeholder {
     color: transparent;
   }
-  .form__field:placeholder-shown ~ .form__label {
-    font-size: 16px;
-    cursor: text;
-    top: -12px;
-  }
+
   
-  .form__label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 14px;
-    color: #194c48;
-  }
   
   .form__field:focus {
     padding-bottom: 6px;
@@ -449,15 +564,7 @@ tbody {
     border-image: linear-gradient(to right, #11998e, #38ef7d);
     border-image-slice: 1;
   }
-  .form__field:focus ~ .form__label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 1rem;
-    color: #3d3d3d;
-    font-weight: 700;
-  }
+ 
   
   /* reset input */
   .form__field:required, .form__field:invalid {
