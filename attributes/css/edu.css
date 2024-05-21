@@ -2,7 +2,32 @@ body{
     padding: 0px 40px;
 }
 
-.edu_section{
+
+
+@media only screen and (max-width: 1400px) {   
+    .big-thumb-videos{width: 400px;height: 215px;}
+    .big_thumbs {display: flex;flex-wrap: wrap;justify-content: space-between;}
+    .bthumb h5{font-size: 14px;color: rgb(31, 31, 31);}
+    .single-video h6{font-size: 12px;}
+}
+
+
+
+
+@media only screen and (min-width: 1400px) { 
+    .big-thumb-videos{width: 560px;height: 315px;}
+    .big_thumbs{display: flex;flex-wrap: wrap;justify-content: space-evenly;}
+    .bthumb h5{font-size: 16px;color: rgb(31, 31, 31);}
+    .single-video h6{font-size: 14px;}
+ }
+
+
+
+
+
+
+
+ .edu_section{
     padding: 30px;
     display: flex;
     justify-content: center;
@@ -69,11 +94,7 @@ body{
 .edu_section_2{
     padding: 30px;
 }
-.big_thumbs{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
+
 .big_thumbs_2{
     display: flex;
     flex-wrap: wrap;

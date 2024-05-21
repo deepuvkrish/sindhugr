@@ -165,12 +165,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 		<div class="big_thumbs">
 			<div class="bthumb">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/J_iDcKDAwbA?si=A73zPFc5RX4Tzla5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<iframe class="big-thumb-videos" src="https://www.youtube.com/embed/J_iDcKDAwbA?si=A73zPFc5RX4Tzla5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				<h5>How to reduce carbon Foot print</h5>
 
 			</div>
 			<div class="bthumb">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/hIwiIBorX3E?si=kucBwCWtgUfllUPB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<iframe class="big-thumb-videos" src="https://www.youtube.com/embed/hIwiIBorX3E?si=kucBwCWtgUfllUPB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				<h5>The Cumulative CO2 Emissions by Country Since 1882 </h5>
 			</div>
 
@@ -211,12 +211,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 		<div class="big_thumbs_2">
 			<div class="bthumb">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/m5ych9oDtk0?si=UWJ77Oo7sTgSAR5_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<iframe class="big-thumb-videos" src="https://www.youtube.com/embed/m5ych9oDtk0?si=UWJ77Oo7sTgSAR5_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				<h5>How do carbon market works? </h5>
 
 			</div>
 			<div class="bthumb">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/dRvkOFdfW7k?si=eyE6Vz3h_NlfI1WX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<iframe class="big-thumb-videos" src="https://www.youtube.com/embed/dRvkOFdfW7k?si=eyE6Vz3h_NlfI1WX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				<h5>The rise of carbon removal industry </h5>
 
 			</div>

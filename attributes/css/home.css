@@ -12,10 +12,36 @@ body{
       font-size: 14px;
       color: rgb(0, 0, 0);
       font-weight: 800;
-      }
+    }
+    .about-us .box-item p {
+      margin-bottom: 0px;
+      font-weight: 400;
+      font-size: 12px;
+    }
+    .about-us .box-item {
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+      padding: 10px 30px;
+      background-color: #fff;
+      border-radius: 40px;
+      margin-bottom: 30px;
+      height: 100px;
+    }
+    .about-us .box-item h4 a {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 8px;
+      color: #2a2a2a;
+      transition: all .3s;
+      text-decoration: none;
+    } 
      
   
-}@media only screen and (min-width: 1400px) {
+}
+
+
+
+
+@media only screen and (min-width: 1400px) {
   .logo-title-nav{
     font-size: 30px;
       color: rgb(54 131 4);
@@ -25,8 +51,68 @@ body{
       font-size: 20px;
       color: rgb(0, 0, 0);
       font-weight: 800;
-      }
+    }
+    .about-us .box-item p {
+        margin-bottom: 0px;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .about-us .box-item {
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+      padding: 10px 30px;
+      background-color: #fff;
+      border-radius: 40px;
+      margin-bottom: 30px;
+      height: 100px;
+    }
+    .about-us .box-item h4 a {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 8px;
+      color: #2a2a2a;
+      transition: all .3s;
+      text-decoration: none;
+  }
   
+}
+
+
+.shop-box{
+  background-image: url(../images/shop.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+}.announce-box{
+  background-image: url(../images/announce.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+}.support-box{
+  background-image: url(../images/support.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+}.email-box{
+  background-image: url(../images/email.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+}
+.email-box:hover{
+  background-blend-mode:darken;
+}
+.support-box:hover{
+  background-blend-mode:darken;
+}
+.announce-box:hover{
+  background-blend-mode:darken;
+}
+.shop-box:hover{
+  background-blend-mode:darken;
 }
 .user-name{
 	text-transform: capitalize;
@@ -849,29 +935,13 @@ About Us
 
 }
 
-.about-us .box-item {
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
-  padding: 10px 30px;
-  background-color: #fff;
-  border-radius: 40px;
-  margin-bottom: 30px;
-}
 
-.about-us .box-item h4 a {
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 8px;
-  color: #2a2a2a;
-  transition: all .3s;
-}
+
 .section-heading p{
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
 }
-.about-us .box-item p {
-  margin-bottom: 0px;
-  font-weight: 400;
-}
+
 
 .about-us .box-item:hover h4 a {
   color: #4b8ef1;

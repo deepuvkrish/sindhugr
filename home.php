@@ -142,25 +142,25 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="box-item">
-                                <h4><a href="#">Maintance Problems</a></h4>
-                                <p>Lorem Ipsum Text</p>
+                            <div class="box-item announce-box">
+                                <h4><a href="events.php">Check our Events</a></h4>
+                                <p>A little change makes a whole lot</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="box-item">
+                            <div class="box-item support-box">
                                 <h4><a href="#">24/7 Support &amp; Help</a></h4>
                                 <p>Tips and Resources are provided for sustainable living movement</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="box-item">
-                                <h4><a href="#">Fixing Issues About</a></h4>
-                                <p>Lorem Ipsum Text</p>
+                            <div class="box-item shop-box">
+                                <h4><a href="green.php">Go Green</a></h4>
+                                <p>Shop for best Sustainable products</p>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="box-item">
+                        <div class="col-lg-6 ">
+                            <div class="box-item email-box">
                                 <h4><a href="https://groups.google.com/u/1/g/pro-planet-updates">Sign Up for Tips</a></h4>
                                 <p>Sign up for our newsletter to stay informed.</p>
                             </div>

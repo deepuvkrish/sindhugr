@@ -243,24 +243,24 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 <i class="fa-solid fa-fire-flame-simple fa-flip fa-2xl" style="color: #ff9500;"></i>
                             </div>
                             <div class="form__group field">
-                                <input type="input" class="form__field" placeholder="Electricity Bill" name="ebill" id='ebill' onchange="elecfunction()" />
+                                <input required type="number" class="form__field" placeholder="Electricity Bill" name="ebill" id='ebill' onchange="elecfunction()" />
                                 <label class="form__label"><i class="fa-solid fa-bolt fa-2xs" style="color: #FFD43B;"></i>Enter your monthly Electricity bill in units/month:</label>
                             </div>
                             <div class="form__group field">
                                 <div id="gaserror" class="bilerr"></div>
-                                <input type="number" class="form__field" placeholder="Gas Bill" name="gasbill" id='gasbill' min="0" max="100" onchange="lpgfunction()" />
+                                <input required type="number" class="form__field" placeholder="Gas Bill" name="gasbill" id='gasbill' min="0" max="100" onchange="lpgfunction()" />
                                 <label class="form__label"><img src="attributes/images/gascylinder.png" style="width: 20px;">Number of LPG Cylinders Used for cooking </label>
                             </div>
                             <div class="form__group field">
                                 <div id="Coalerror" class="bilerr"></div>
-                                <input type="number" class="form__field" placeholder="Coal Bill" name="coalbill" id='coalbill' min="0" max="9000" onchange="coalfunction()" />
+                                <input required type="number" class="form__field" placeholder="Coal Bill" name="coalbill" id='coalbill' min="0" max="9000" onchange="coalfunction()" />
                                 <label class="form__label">
                                     <img src="attributes/images/coal.png" style="width: 20px;">How much Coal in Kilos used for cooking (If any):
                                 </label>
                             </div>
                             <div class="form__group field">
                                 <div id="cngcookerror" class="bilerr"></div>
-                                <input type="number" class="form__field" placeholder="CNG Bill" name="cngcookbill" id='cngcookbill' min="0" max="100" onchange="cngcookfunction()" />
+                                <input required type="number" class="form__field" placeholder="CNG Bill" name="cngcookbill" id='cngcookbill' min="0" max="100" onchange="cngcookfunction()" />
                                 <label class="form__label"><img src="attributes/images/cng.png" style="width: 20px;">Number of CNG Cylinders used at home (If any) : </label>
                             </div>
                         </div>
@@ -271,38 +271,38 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             </div>
                             <div class="form__group field">
                                 <div id="petrolerror" class="bilerr"></div>
-                                <input type="number" class="form__field" placeholder="Mileage Bill" name="mileage" id='petrol' onchange="petrolusage()" min='0' max='99999' />
+                                <input required type="number" class="form__field" placeholder="Mileage Bill" name="mileage" id='petrol' onchange="petrolusage()" min='0' max='99999' />
                                 <label class="form__label"><img src="attributes/images/petrol.png" style="width: 20px;">Enter Litres of Petrol bought (If any):</label>
                             </div>
                             <div class="form__group field">
                                 <div id="dieselerror" class="bilerr"></div>
-                                <input type="input" class="form__field" placeholder="Mileage Bill" name="mileage" id='diesel' onchange="dieselusage()" />
+                                <input required type="input" class="form__field" placeholder="Mileage Bill" name="mileage" id='diesel' onchange="dieselusage()" />
                                 <label class="form__label"><img src="attributes/images/diesel.png" style="width: 20px;">Enter Litres of Diesel bought (If any):</label>
                             </div>
                             <div class="form__group field">
                                 <div id="cngusageerror" class="bilerr"></div>
-                                <input type="number" class="form__field" placeholder="Mileage Bill" name="CNG fuel" id='cngfuel' onchange="cngusage()" min="0" max="99999" />
+                                <input required type="number" class="form__field" placeholder="Mileage Bill" name="CNG fuel" id='cngfuel' onchange="cngusage()" min="0" max="99999" />
                                 <label class="form__label"><img src="attributes/images/cng.png" style="width: 20px;">Enter Kilos of CNG bought (If any):</label>
                             </div>
                             <div class="form__group field">
                                 <div id="autolpgerror" class="bilerr"></div>
 
-                                <input type="number" class="form__field" placeholder="Mileage Bill" name="mileage" id='autolpg' onchange="autolgpsusage()" min="0" max="99999" />
+                                <input required type="number" class="form__field" placeholder="Mileage Bill" name="mileage" id='autolpg' onchange="autolgpsusage()" min="0" max="99999" />
                                 <label class="form__label"><img src="attributes/images/lpg.png" style="width: 20px;">Enter number of Auto LGP Cylinders bought (If any):</label>
                             </div>
                             <div class="form__group field">
                                 <div id="taxierror" class="bilerr"></div>
-                                <input type="number" class="form__field" placeholder="Taxi Bill" name="taxi" id='taxiid' onchange="taxisusage()" min="0" max="99999" />
+                                <input required type="number" class="form__field" placeholder="Taxi Bill" name="taxi" id='taxiid' onchange="taxisusage()" min="0" max="99999" />
                                 <label class="form__label"><img src="attributes/images/taxi.png" style="width: 20px;">Enter Kms you travelled in a taxi (If any):</label>
                             </div>
                             <div class="form__group field">
                                 <div id="buserror" class="bilerr"></div>
-                                <input type="number" min="0" max="99999" class="form__field" placeholder="Bus Travel" name="bustravel" id='bus' onchange="bususage()" />
+                                <input required type="number" min="0" max="99999" class="form__field" placeholder="Bus Travel" name="bustravel" id='bus' onchange="bususage()" />
                                 <label class="form__label"><img src="attributes/images/bus.png" style="width: 20px;">Enter Kms you travelled in a bus (If any):</label>
                             </div>
                             <div class="form__group field">
                                 <div id="trainerror" class="bilerr"></div>
-                                <input type="number" min="0" max="99999" class="form__field" placeholder="Train travel" name="Train Travel" id='traintravel' onchange="trainusage()" />
+                                <input required type="number" min="0" max="99999" class="form__field" placeholder="Train travel" name="Train Travel" id='traintravel' onchange="trainusage()" />
                                 <label class="form__label"><img src="attributes/images/train.png" style="width: 20px;">Enter Kms you travelled in a Train (If any):</label>
                             </div>
                         </div>

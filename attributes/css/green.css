@@ -4721,58 +4721,100 @@ text-shadow: none;
             color: #999;
             cursor: default; }
       
-      .no-csspointerevents .nice-select .list {
+      	.no-csspointerevents .nice-select .list {
         display: none; }
       
-      .no-csspointerevents .nice-select.open .list {
+      	.no-csspointerevents .nice-select.open .list {
         display: block; }
-.slicknav_btn,.slicknav_nav .slicknav_item{cursor:pointer}.slicknav_menu,.slicknav_menu *{box-sizing:border-box}.slicknav_btn{position:relative;display:block;vertical-align:middle;float:right;padding:.438em .625em;line-height:1.125em}.slicknav_btn .slicknav_icon-bar+.slicknav_icon-bar{margin-top:.188em}.slicknav_menu .slicknav_menutxt{display:block;line-height:1.188em;float:left;color:#fff;font-weight:700;text-shadow:0 1px 3px #000}.slicknav_menu .slicknav_icon{float:left;width:1.125em;height:.875em;margin:.188em 0 0 .438em}.slicknav_menu .slicknav_icon:before{background:0 0;width:1.125em;height:.875em;display:block;content:"";position:absolute}.slicknav_menu .slicknav_no-text{margin:0}.slicknav_menu .slicknav_icon-bar{display:block;width:1.125em;height:.125em;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.25);-moz-box-shadow:0 1px 0 rgba(0,0,0,.25);box-shadow:0 1px 0 rgba(0,0,0,.25)}.slicknav_menu:after,.slicknav_menu:before{content:" ";display:table}.slicknav_menu:after{clear:both}.slicknav_nav li,.slicknav_nav ul{display:block}.slicknav_nav .slicknav_arrow{font-size:.8em;margin:0 0 0 .4em}.slicknav_nav .slicknav_item a{display:inline}.slicknav_nav .slicknav_row,.slicknav_nav a{display:block}.slicknav_nav .slicknav_parent-link a{display:inline}.slicknav_menu{*zoom:1;font-size:16px;background:#4c4c4c;padding:5px}.slicknav_nav,.slicknav_nav ul{list-style:none;overflow:hidden;padding:0}.slicknav_menu .slicknav_icon-bar{background-color:#fff}.slicknav_btn{margin:5px 5px 6px;text-decoration:none;text-shadow:0 1px 1px rgba(255,255,255,.75);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;background-color:#222}.slicknav_nav{clear:both;color:#fff;margin:0;font-size:.875em}.slicknav_nav ul{margin:0 0 0 20px}.slicknav_nav .slicknav_row,.slicknav_nav a{padding:5px 10px;margin:2px 5px}.slicknav_nav .slicknav_row:hover{-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;background:#ccc;color:#fff}.slicknav_nav a{text-decoration:none;color:#fff}.slicknav_nav a:hover{-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;background:#ccc;color:#222}.slicknav_nav .slicknav_txtnode{margin-left:15px}.slicknav_nav .slicknav_item a,.slicknav_nav .slicknav_parent-link a{padding:0;margin:0}.slicknav_brand{float:left;color:#fff;font-size:18px;line-height:30px;padding:7px 12px;height:44px}
-      
+		.slicknav_btn,.slicknav_nav .slicknav_item{cursor:pointer}
+		.slicknav_menu,.slicknav_menu *{box-sizing:border-box}
+		.slicknav_btn{position:relative;display:block;vertical-align:middle;float:right;padding:.438em .625em;line-height:1.125em}
+		.slicknav_btn .slicknav_icon-bar+.slicknav_icon-bar{margin-top:.188em}
+		.slicknav_menu .slicknav_menutxt{display:block;line-height:1.188em;float:left;color:#fff;font-weight:700;text-shadow:0 1px 3px #000}
+		.slicknav_menu .slicknav_icon{float:left;width:1.125em;height:.875em;margin:.188em 0 0 .438em}
+		.slicknav_menu .slicknav_icon:before{background:0 0;width:1.125em;height:.875em;display:block;content:"";position:absolute}
+		.slicknav_menu .slicknav_no-text{margin:0}
+		.slicknav_menu .slicknav_icon-bar{
+			display:block;
+			width:1.125em;
+			height:.125em;
+			-webkit-border-radius:1px;
+			-moz-border-radius:1px;
+			border-radius:1px;
+			-webkit-box-shadow:0 1px 0 rgba(0,0,0,.25);
+			-moz-box-shadow:0 1px 0 rgba(0,0,0,.25);
+			box-shadow:0 1px 0 rgba(0,0,0,.25)
+		}
+		.slicknav_menu:after,.slicknav_menu:before{content:" ";display:table}
+		.slicknav_menu:after{clear:both}
+		.slicknav_nav li,.slicknav_nav ul{display:block}
+		.slicknav_nav .slicknav_arrow{font-size:.8em;margin:0 0 0 .4em}
+		.slicknav_nav .slicknav_item a{display:inline}
+		.slicknav_nav .slicknav_row,.slicknav_nav a{display:block}.slicknav_nav .slicknav_parent-link a{display:inline}
+		.slicknav_menu{zoom:1;font-size:16px;background:#4c4c4c;padding:5px}
+		.slicknav_nav,.slicknav_nav ul{list-style:none;overflow:hidden;padding:0}
+		.slicknav_menu .slicknav_icon-bar{background-color:#fff}
+		.slicknav_btn{
+			margin:5px 5px 6px;
+			text-decoration:none;
+			text-shadow:0 1px 1px rgba(255,255,255,.75);
+			-webkit-border-radius:4px;
+			-moz-border-radius:4px;
+			border-radius:4px;
+			background-color:#222
+		}
+		.slicknav_nav{clear:both;color:#fff;margin:0;font-size:.875em}
+		.slicknav_nav ul{margin:0 0 0 20px}
+		.slicknav_nav .slicknav_row,.slicknav_nav a{padding:5px 10px;margin:2px 5px}
+		.slicknav_nav .slicknav_row:hover{-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;background:#ccc;color:#fff}
+		.slicknav_nav a{text-decoration:none;color:#fff}
+		.slicknav_nav a:hover{-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;background:#ccc;color:#222}
+		.slicknav_nav .slicknav_txtnode{margin-left:15px}
+		.slicknav_nav .slicknav_item a,.slicknav_nav .slicknav_parent-link a{padding:0;margin:0}
+		.slicknav_brand{float:left;color:#fff;font-size:18px;line-height:30px;padding:7px 12px;height:44px}
+		.set_bg {
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
 
 
-.set_bg {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-}
 
+		.banner1{
+			background-image: url('https://eonoffice.com/wp-content/uploads/fly-images/29040/EON-ED-BLOG-IMAGES-1-630x450-c.png');
+		}
 
+		.cate1{
+			background-image: url('https://ripe.london/wp-content/uploads/2021/08/superior-fruit-box.jpeg');
+		}
+		.cate2{
+			background-image: url('https://social.thearvindstore.com/data/fb_images/arvindmenswearofficial/742292785801165.jpg');
+		}
+		.cate3{
+			background-image: url('https://images-cdn.ubuy.co.in/633b31240c53c12c0602a57e-ubuy-online-shopping.jpg');
+		}
+		.cate4{
+			background-image: url('https://nurserylive.com/cdn/shop/products/nurserylive-gifts-celebrate-eco-friendly-diwali-with-syngonium-plant-16968700592268_512x512.jpg?v=1634215719');
+		}
+		.cate5{
+			background-image: url('https://i.etsystatic.com/19031963/r/il/fe3dbe/2935379703/il_570xN.2935379703_gm0l.jpg');
+		}
 
-.banner1{
-    background-image: url('https://eonoffice.com/wp-content/uploads/fly-images/29040/EON-ED-BLOG-IMAGES-1-630x450-c.png');
-}
-
-.cate1{
-    background-image: url('https://ripe.london/wp-content/uploads/2021/08/superior-fruit-box.jpeg');
-}
-.cate2{
-    background-image: url('https://social.thearvindstore.com/data/fb_images/arvindmenswearofficial/742292785801165.jpg');
-}
-.cate3{
-    background-image: url('https://images-cdn.ubuy.co.in/633b31240c53c12c0602a57e-ubuy-online-shopping.jpg');
-}
-.cate4{
-    background-image: url('https://nurserylive.com/cdn/shop/products/nurserylive-gifts-celebrate-eco-friendly-diwali-with-syngonium-plant-16968700592268_512x512.jpg?v=1634215719');
-}
-.cate5{
-    background-image: url('https://i.etsystatic.com/19031963/r/il/fe3dbe/2935379703/il_570xN.2935379703_gm0l.jpg');
-}
-
-.feature1{
-    background-image: url('https://www.senspa.co.uk/cdn/shop/collections/careys_forest_products187565.jpg?v=1664451807');
-}.feature2{
-    background-image: url('https://sustainablereview.com/wp-content/uploads/2023/10/AdobeStock_188030473.jpeg');
-}.feature3{
-    background-image: url('https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/2/3/23-0022-gn-i-01.jpg');
-}.feature4{
-    background-image: url('https://i1.wp.com/chicinitie.com/wp-content/uploads/2015/01/1-img_2419.jpg?fit=800%2C565&ssl=1');
-}.feature5{
-    background-image: url('https://www.nutraingredients.com/var/wrbm_gb_food_pharma/storage/images/_aliases/wrbm_large/publications/food-beverage-nutrition/nutraingredients.com/article/2022/02/01/pandemic-drives-healthy-drinks-business-purearth-s-growth/13198014-3-eng-GB/Pandemic-drives-healthy-drinks-business-Purearth-s-growth.jpg');
-}.feature6{
-    background-image: url('https://5.imimg.com/data5/XQ/NT/GLADMIN-46694615/organic-food-500x500.jpg');
-}.feature7{
-    background-image: url('https://wildflowerbeautystudio.ca/cdn/shop/products/stonecropcleansingoil.jpg?v=1616359766');
-}.feature8{
-    background-image: url('https://img.freepik.com/premium-photo/organic-skincare-with-natural-ingredients-pure-radiance_893610-9426.jpg');
-}
+		.feature1{
+			background-image: url('https://www.senspa.co.uk/cdn/shop/collections/careys_forest_products187565.jpg?v=1664451807');
+		}.feature2{
+			background-image: url('https://sustainablereview.com/wp-content/uploads/2023/10/AdobeStock_188030473.jpeg');
+		}.feature3{
+			background-image: url('https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/2/3/23-0022-gn-i-01.jpg');
+		}.feature4{
+			background-image: url('https://i1.wp.com/chicinitie.com/wp-content/uploads/2015/01/1-img_2419.jpg?fit=800%2C565&ssl=1');
+		}.feature5{
+			background-image: url('https://www.nutraingredients.com/var/wrbm_gb_food_pharma/storage/images/_aliases/wrbm_large/publications/food-beverage-nutrition/nutraingredients.com/article/2022/02/01/pandemic-drives-healthy-drinks-business-purearth-s-growth/13198014-3-eng-GB/Pandemic-drives-healthy-drinks-business-Purearth-s-growth.jpg');
+		}.feature6{
+			background-image: url('https://5.imimg.com/data5/XQ/NT/GLADMIN-46694615/organic-food-500x500.jpg');
+		}.feature7{
+			background-image: url('https://wildflowerbeautystudio.ca/cdn/shop/products/stonecropcleansingoil.jpg?v=1616359766');
+		}.feature8{
+			background-image: url('https://img.freepik.com/premium-photo/organic-skincare-with-natural-ingredients-pure-radiance_893610-9426.jpg');
+		}
 
