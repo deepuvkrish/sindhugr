@@ -119,6 +119,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
 
             <div class="video-gallery">
+                <div class="gallery-item">
+                    <img src="https://ddnews.gov.in/wp-content/uploads/2024/04/2102b797-58e4-4771-b520-0814f6973aab.jpeg" alt="Recycle Plastic" />
+                    <div class="gallery-item-caption">
+                        <!--<div>-->
+                        <h2>World Earth Day 2024</h2>
+                        <p>EARTHDAY.ORG (EDO) is focused on accelerating solutions to combat plastic pollution by activating governments, citizens, and businesses to do their part– everyone accounted for, everyone accountable.</p>
+                        <!--</div>-->
+                        <a class="vimeo-popup" target="_blank" href="https://www.earthday.org/campaign/cleanup/#map"></a>
+                    </div>
+                </div>
+
                 <div class="gallery-item ">
                     <img src="https://miro.medium.com/v2/resize:fit:626/0*x8A4BLPfImlj69H9.jpg" alt="CO2 Emmision" />
                     <div class="gallery-item-caption">
@@ -126,7 +137,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         <h2>World Wetlands Day</h2>
                         <p>World Wetlands Day is celebrated every year on 2 February. This day marks the date of the adoption of the Convention on Wetlands on 2 February 1971, in the Iranian city of Ramsar on the shores of the Caspian Sea.</p>
                         <!--</div>-->
-                        <a class="vimeo-popup" href="https://www.ramsar.org/our-work/activities/world-wetlands-day"></a>
+                        <a class="vimeo-popup" target="_blank" href="https://www.ramsar.org/our-work/activities/world-wetlands-day"></a>
                     </div>
                 </div>
 
@@ -143,48 +154,46 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://housing.com/news/wp-content/uploads/2023/03/shutterstock_2008709621-1200x700-compressed.jpg" class="north-cascades-img" alt="Water Pollution Awareness Campaign: Safeguarding Our Blue Planet" />
+                    <img src="https://wwfin.awsassets.panda.org/img/dscn3614_60568.jpg" />
                     <div class="gallery-item-caption">
                         <!--<div>-->
-                        <h2>Water Pollution Awareness Campaign: Safeguarding Our Blue Planet</h2>
-                        <p>Join us in our mission to protect our precious water resources! The Water Pollution Awareness Campaign aims to educate, engage, and empower individuals and communities to take action against water pollution. Together, let’s create ripples of change and ensure clean water for generations to come! 💧🌊</p>
+                        <h2>A Beach clean-up like no other in Mumbai</h2>
+                        <p>As the world celebrated Earth Day on April 22 – volunteer groups joined forces to clean several beaches in the city. Resonating with the theme for this year, “Invest in our Planet”, thousands of Mumbaikars participated in giving a new lease of life to Mumbai’s choked beaches dotted with domestic waste, plastics, and pollutants.💧🌊</p>
                         <!--</div>-->
-                        <a class="vimeo-popup" href="#"></a>
+                        <a class="vimeo-popup" target="_blank" href="https://www.wwfindia.org/news_facts/feature_stories/a_beach_clean_up_like_no_other_in_mumbai/"></a>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://as2.ftcdn.net/v2/jpg/02/71/75/59/1000_F_271755921_rxz22woHX5UtWryKTYpGVfVaO2VGkWYS.jpg" alt="Stuffed with stuffs" />
+                    <img src="https://cdn.unenvironment.org/styles/article_billboard_image/s3/2022-03/51913923286_e1698e50e0_c.jpg?h=87a4b108&itok=pPPOUD78" alt="International Conference on Pollution Control & Sustainable Environment" />
                     <div class="gallery-item-caption">
                         <!--<div>-->
-                        <h2>Stuffed with stuffs</h2>
-                        <p>Items shipped to your home often come wrapped in plastic packaging; toys bought at the store are covered
-                            in it. Think about what can be bought secondhand, what can be shared, and what doesn’t need to be
-                            purchased at all.</p>
+                        <h2>International Conference on Pollution Control & Sustainable Environment</h2>
+                        <p>International Conference on Pollution Control & Sustainable Environment ICPCSE-24 is a globally recognized, highly appreciated platform globally with the richness of abundance. To be held on 8th June 2024 at Coimbatore, this event is sure to repeat its history again.</p>
                         <!--</div>-->
-                        <a class="vimeo-popup" href="#"></a>
+                        <a class="vimeo-popup" target="_blank" href="https://www.sfe.net.in/conf/index.php?id=2479506"></a>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://sb.ecobnb.net/app/uploads/sites/3/2020/12/cycling-is-healthy.jpg" alt="Walk it out" />
+                    <img src="https://www.netsolwater.com/netsol-water/assets/img/product-images/Waste_management_in_India.jpg" alt="Walk it out" />
                     <div class="gallery-item-caption">
                         <!--<div>-->
-                        <h2>Walk it out</h2>
-                        <p>Walk or bike as much as you can. Biking or walking just one mile a day for a year could save 330 pounds of carbon dioxide—that’s the same as planting four trees and letting them grow for 10 years!Together,let’s create a breath of fresh air. Join us with events</p>
+                        <h2>International Conference on Recycling and Waste Management (ICRWM-24)</h2>
+                        <p>ICRWM organizing committee with great honor extending you a warm invitation to attend the International Conference on Recycling and Waste Management which is slated to held in 1st June'2024 in Coimbatore, India. </p>
                         <!--</div>-->
-                        <a class="vimeo-popup" href="#"></a>
+                        <a class="vimeo-popup" target="_blank" href="https://nier.in//conf/index.php?id=2479852"></a>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://europlas.com.vn/Data/Sites/1/News/5368/how-to-recycle-plastic-bottles-(2).jpg" alt="Recycle Plastic" />
+                    <img src="https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2021/06/world-environment-day-1622817142.jpg" alt="Recycle Plastic" />
                     <div class="gallery-item-caption">
                         <!--<div>-->
-                        <h2>Recycle Plastic</h2>
-                        <p>According to one study, over eight million tons of plastic pollution end up in the ocean each year. Drink from a refillable water bottle, place your sandwich in cloth or a reusable container, and use bar soap instead of bottled.</p>
+                        <h2>world environment day</h2>
+                        <p>Creating environment awareness among local citizens regaring using environment friendly products, disposing of e-waste and batteries in safe ways.</p>
                         <!--</div>-->
-                        <a class="vimeo-popup" href="#"></a>
+                        <a class="vimeo-popup" target="_blank" href="https://www.worldenvironmentday.global/"></a>
                     </div>
                 </div>
 

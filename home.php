@@ -149,7 +149,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         </div>
                         <div class="col-lg-6">
                             <div class="box-item support-box">
-                                <h4><a href="#">24/7 Support &amp; Help</a></h4>
+                                <h4><a href="forum.php">24/7 Support &amp; Help</a></h4>
                                 <p>Tips and Resources are provided for sustainable living movement</p>
                             </div>
                         </div>

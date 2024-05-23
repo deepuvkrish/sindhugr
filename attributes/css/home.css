@@ -15,8 +15,9 @@ body{
     }
     .about-us .box-item p {
       margin-bottom: 0px;
-      font-weight: 400;
-      font-size: 12px;
+        font-weight: 500;
+        font-size: 11px;
+        width: 135px;
     }
     .about-us .box-item {
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);

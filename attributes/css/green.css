@@ -960,7 +960,8 @@ ol {
 
 .latest-product__item__pic img {
 	height: 110px;
-	width: 110px;
+	width: 110px !important;
+	border-radius: 10px;
 }
 
 .latest-product__item__text {
